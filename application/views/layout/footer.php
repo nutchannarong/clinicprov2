@@ -1,336 +1,84 @@
-<footer class="site__footer">
-    <div class="site-footer">
-        <div class="site-footer__widgets">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-12">
-                        <div class="row">
-                            <div class="col-6 col-md-4 col-xl">
-                                <div class="site-footer__widget footer-links">
-                                    <ul class="footer-links__list">
-                                        <li class="footer-links__item"><a href="<?php echo base_url() . 'about'; ?>" class="footer-links__link">เกี่ยวกับเรา</a></li>
-                                        <li class="footer-links__item"><a href="<?php echo base_url() . 'conditions'; ?>" class="footer-links__link">ข้อตกลงและเงื่อนไข</a></li>
-                                        <li class="footer-links__item"><a href="<?php echo base_url() . 'privacypolicy'; ?>" class="footer-links__link">นโยบายความเป็นส่วนตัว</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-xl">
-                                <div class="site-footer__widget footer-links">
-                                    <ul class="footer-links__list">
-                                        <li class="footer-links__item"><a href="<?php echo base_url() . 'promotions'; ?>" class="footer-links__link">โปรโมชั่น</a></li>
-                                        <li class="footer-links__item"><a href="<?php echo base_url() . 'shops'; ?>" class="footer-links__link">ค้นหาคลินิก</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-xl">
-                                <div class="site-footer__widget footer-links">
-                                    <ul class="footer-links__list">
-                                        <li class="footer-links__item"><a href="<?php echo base_url() . 'authen'; ?>" class="footer-links__link">เข้าสู่ระบบ</a></li>
-                                        <li class="footer-links__item"><a href="<?php echo admin_url(); ?>" target="_blank" class="footer-links__link">สำหรับเจ้าของคลินิก</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-xl">
-                                <div class="site-footer__widget footer-links">
-                                    <ul class="footer-links__list">
-                                        <li class="footer-links__item"><a href="<?php echo base_url() . 'review'; ?>" class="footer-links__link">รีวิว</a></li>
-                                        <li class="footer-links__item"><a href="<?php echo base_url() . 'blog'; ?>" class="footer-links__link">บทความ</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-xl">
-                                <div class="site-footer__widget footer-links">
-                                    <ul class="footer-links__list">
-                                        <li class="footer-links__item"><a href="<?php echo base_url() . 'contact'; ?>" class="footer-links__link">ติดต่อเรา</a></li>
-                                        <li class="footer-links__item"><a href="<?php echo base_url() . 'sitemap'; ?>" class="footer-links__link">ผังเว็บไซต์</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">                            
-                            <div class="col-12 col-md-12 col-xl-12 text-center">  
-                                <div class="d-block d-sm-block d-md-none d-lg-none d-xl-none">
-                                    <img src="<?php echo base_url() . 'assets/img/payments.png'; ?>" width="350" class="img-responsive"/>    
-                                </div>
-                                <div class="d-none d-sm-none d-md-block d-lg-block d-xl-block">
-                                    <img src="<?php echo base_url() . 'assets/img/payments.png'; ?>" height="50" class="img-responsive"/>                                
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-md-12 col-xl-12 text-center mt-3">
-                                <?php echo $this->config->item('app_footer'); ?> Page rendered in <strong>{elapsed_time}</strong> seconds.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Footer -->
+<footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
+  <div class="container pt-lg-4">
+    <div class="row pb-5">
+      <div class="col-lg-4 col-md-6">
+        <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+          <img src="assets/img/logo.svg" width="47" alt="Silicon">
+          Silicon
         </div>
+        <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Proin ipsum pharetra, senectus eget scelerisque varius pretium platea velit. Lacus, eget eu vitae nullam proin turpis etiam mi sit. Non feugiat feugiat egestas nulla nec. Arcu tempus, eget elementum dolor ullamcorper sodales ultrices eros.</p>
+        <form class="needs-validation" novalidate>
+          <label for="subscr-email" class="form-label">Subscribe to our newsletter</label>
+          <div class="input-group">
+            <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Your email" required>
+            <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+            <div class="invalid-tooltip position-absolute top-100 start-0">Please provide a valid email address.</div>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+        <div id="footer-links" class="row">
+          <div class="col-lg-4">
+            <h6 class="mb-2">
+              <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Useful Links</a>
+            </h6>
+            <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+              <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Services</a></li>
+                <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Portfolio</a></li>
+                <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Blog</a></li>
+              </ul>
+              <ul class="nav flex-column mb-2 mb-lg-0">
+                <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Terms &amp; Conditions</a></li>
+                <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-3">
+            <h6 class="mb-2">
+              <a href="#social-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Socials</a>
+            </h6>
+            <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+              <ul class="nav flex-column mb-2 mb-lg-0">
+                <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Facebook</a></li>
+                <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">LinkedIn</a></li>
+                <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Twitter</a></li>
+                <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+            <h6 class="mb-2">Contact Us</h6>
+            <a href="mailto:email@example.com" class="fw-medium">email@example.com</a>
+          </div>
+        </div>
+      </div>
     </div>
+    <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
+      <span class="text-light opacity-50">&copy; All rights reserved. Made by </span>
+      <a class="nav-link d-inline-block p-0" href="https://createx.studio/" target="_blank" rel="noopener">Createx Studio</a>
+    </p>
+  </div>
 </footer>
 
-<!-- mobile-menu -->
-<div class="mobile-menu">
-    <div class="mobile-menu__backdrop"></div>
-    <div class="mobile-menu__body">
-        <button class="mobile-menu__close" type="button">
-            <i class="fas fa-times-circle"></i>
-        </button>
-        <div class="mobile-menu__panel">
-            <div class="mobile-menu__panel-header">
-                <div class="mobile-menu__panel-title">เมนู</div>
-            </div>
-            <div class="mobile-menu__panel-body">
-                <!--                <div class="mobile-menu__settings-list" style="min-height: 38px;">
-                                    <div class="mobile-menu__setting" data-mobile-menu-item>
-                                        <a href="<?php echo base_url(); ?>" class="mobile-menu__setting-button" title="รายการ" data-mobile-menu-trigger>
-                                            <span class="mobile-menu__setting-title">ประวัติการสั่งซื้อ </span>
-                                        </a>
-                                    </div>
-                                    <div class="mobile-menu__setting" data-mobile-menu-item>
-                                        <a href="<?php echo base_url() . 'appoint'; ?>" class="mobile-menu__setting-button" title="รายการ" data-mobile-menu-trigger>
-                                            <span class="mobile-menu__setting-title">ตารางนัดหมาย </span>
-                                        </a>
-                                    </div>
-                                </div>-->
-                <div class="mobile-menu__divider"></div>
-                <?php
-                if ($this->session->userdata('islogin') == 1) {
-                    $get_online = $this->global_model->getOnlineByID($this->session->userdata('online_id'))->row();
-                    ?>
-                    <div class="mobile-menu__indicators" style="min-height: 76px;">
-                        <a class="mobile-menu__indicator" href="<?php echo base_url() . 'profile'; ?>" style="padding-top: 2px;">
-                            <span class="mobile-menu__indicator-icon account-menu__user-avatar" style="margin-right: -10px;">
-                                <img src="<?php echo admin_url() . 'assets/upload/online/' . $get_online->online_image; ?>" width="28" height="28" alt="Profile">
-                            </span>
-                            <span class="mobile-menu__indicator-title">ประวัติส่วนตัว</span>
-                        </a>
-                        <a class="mobile-menu__indicator" href="<?php echo base_url() . 'promotionbirthdate'; ?>" style="padding-top: 2px;">
-                            <span class="mobile-menu__indicator-icon  account-menu__user-avatar" style="margin-right: -10px;">
-                                <i class="fa fa-birthday-cake" style="font-size: 18px;"></i>
-                            </span>
-                            <span class="mobile-menu__indicator-title">บริการแนะนำ</span>
-                        </a>
-                        <a class="mobile-menu__indicator" href="<?php echo base_url() . 'services'; ?>" style="padding-top: 2px;">
-                            <span class="mobile-menu__indicator-icon  account-menu__user-avatar" style="margin-right: -10px;">
-                                <i class="fa fa-list" style="font-size: 18px;"></i>
-                            </span>
-                            <span class="mobile-menu__indicator-title">บริการ/คอร์ส</span>
-                        </a>
-                        <a class="mobile-menu__indicator" href="<?php echo base_url() . 'authen/logout'; ?>" style="padding-top: 2px;">
-                            <span class="mobile-menu__indicator-icon text-center">
-                                <i class="fas fa-sign-out-alt" style="font-size: 18px;"></i>
-                            </span>
-                            <span class="mobile-menu__indicator-title">ออกจากระบบ</span>
-                        </a>
-                    </div>
-                    <?php
-                } else {
-                    ?>
-                    <div class="mobile-menu__indicators" style="min-height: 76px;">
-                        <a class="mobile-menu__indicator" href="<?php echo base_url('authen'); ?>">
-                            <span class="mobile-menu__indicator-icon">
-                                <i class="fas fa-sign-in-alt"></i>
-                            </span>
-                            <span class="mobile-menu__indicator-title">เข้าสู่ระบบ</span>
-                        </a>                        
-                    </div>
-                    <?php
-                }
-                ?>
-                <div class="mobile-menu__divider"></div>
-                <ul class="mobile-menu__links">
-                    <li data-mobile-menu-item>
-                        <a href="<?php echo base_url(); ?>" class="" data-mobile-menu-trigger>
-                            หน้าเเรก
-                        </a>
-                    </li>
-                    <li data-mobile-menu-item>
-                        <a href="<?php echo base_url() . 'promotions'; ?>" class="" data-mobile-menu-trigger>
-                            โปรโมชั่น
-                        </a>
-                    </li>
-                    <li data-mobile-menu-item>
-                        <a href="<?php echo base_url() . 'shops'; ?>" class="" data-mobile-menu-trigger>
-                            ค้นหาคลินิก
-                        </a>
-                    </li>
-                    <li data-mobile-menu-item>
-                        <a href="<?php echo base_url() . 'review'; ?>" class="" data-mobile-menu-trigger>
-                            รีวิว
-                        </a>
-                    </li>
-                    <li data-mobile-menu-item>
-                        <a href="<?php echo base_url() . 'blog'; ?>" class="" data-mobile-menu-trigger>
-                            บทความ
-                        </a>
-                    </li>
-                    <li data-mobile-menu-item>
-                        <a href="<?php echo base_url() . 'about'; ?>" class="" data-mobile-menu-trigger>
-                            เกี่ยวกับเรา
-                        </a>
-                    </li>                    <li data-mobile-menu-item>
-                        <a href="<?php echo base_url() . 'conditions'; ?>" class="" data-mobile-menu-trigger>
-                            ข้อตกลงและเงื่อนไข
-                        </a>
-                    </li>
-                    <li data-mobile-menu-item>
-                        <a href="<?php echo base_url() . 'privacypolicy'; ?>" class="" data-mobile-menu-trigger>
-                            นโยบายความเป็นส่วนตัว
-                        </a>
-                    </li>
-                    <li data-mobile-menu-item>
-                        <a href="<?php echo base_url() . 'contact'; ?>" class="" data-mobile-menu-trigger>
-                            ติดต่อเรา
-                        </a>
-                    </li>
-                    <li data-mobile-menu-item>
-                        <a href="<?php echo base_url() . 'sitemap'; ?>" class="" data-mobile-menu-trigger>
-                            ผังเว็บไซต์
-                        </a>
-                    </li>
-                </ul>
-                <div class="mobile-menu__spring"></div>
-                <div class="mobile-menu__divider"></div>
-                <a class="mobile-menu__contacts" href="">
-                    <div class="mobile-menu__contacts-subtitle">โทรสายด่วน</div>
-                    <div class="mobile-menu__contacts-title"> <?php echo $this->config->item('app_phone'); ?></div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<input type="hidden" id="alert_message" value="<?php echo $this->session->flashdata('flash_message') != '' ? $this->session->flashdata('flash_message') : ''; ?>">
 
-<!--<form action="<?php echo "authen/dologinfacebook"; ?>" method="post" name="fbLogin" id="fbLogin">
-    <input type="hidden" id="facebook_id" name="facebook_id">
-    <input type="hidden" id="facebook_fullname" name="facebook_fullname">
-    <input type="hidden" id="facebook_email" name="facebook_email">
-</form>-->
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5W6JJH8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<script>
-    $(function () {
-        var alert_message = $('#alert_message').val();
-        if (alert_message != '') {
-            var foo = alert_message.split(',')
-            notification(foo[0], foo[1], foo[2])
-        }
-    })
-
-    function notification(type, head, message) {
-        $.toast({
-            heading: head,
-            text: message,
-            position: 'top-right',
-            loaderBg: '#D8DBDD',
-            icon: type,
-            hideAfter: 3000,
-            stack: 3
-        })
-    }
-
-    function copylink() {
-        swal({
-            title: "รับฟรีทันที " + '<?php echo $this->config->item('point_guide') ?>' + " แต้ม \r\nหลังจากที่เพื่อนซื้อบริการแล้ว",
-            text: $("#ref_link").val(),
-            showCancelButton: true,
-            confirmButtonColor: "#00897b",
-            confirmButtonText: "คัดลอก",
-            cancelButtonText: "ยกเลิก",
-            closeOnConfirm: false
-        }, function (isConfirm) {
-            if (isConfirm) {
-                var $temp = $("<input>");
-                $("body").append($temp);
-                $temp.val($("#ref_link").val()).select();
-                document.execCommand("copy");
-                $temp.remove();
-                swal("Copy Success", "นำลิงค์แนะนำไปวางได้เลย !", "success");
-            }
-        });
-    }
+<!-- Back to top button -->
+<a href="#top" class="btn-scroll-top" data-scroll>
+  <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+  <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+</a>
 
 
-// login facebook
-//    window.fbAsyncInit = function () {
-//        FB.init({
-//            appId: '<?php echo $this->config->item('fb_app_id') ?>',
-//            cookie: true,
-//            xfbml: true,
-//            version: 'v3.2'
-//        });
-//        FB.AppEvents.logPageView();
-//    };
-//
-//    (function (d, s, id) {
-//        var js, fjs = d.getElementsByTagName(s)[0];
-//        if (d.getElementById(id)) {
-//            return;
-//        }
-//        js = d.createElement(s);
-//        js.id = id;
-//        js.src = "//connect.facebook.net/en_US/sdk.js";
-//        fjs.parentNode.insertBefore(js, fjs);
-//    }(document, 'script', 'facebook-jssdk'));
-//
-//
-//    function facebookLogin() {
-//        FB.getLoginStatus(function (response) {
-//            // console.log(response);
-//            statusChangeCallback(response);
-//        });
-//    }
-//
-//    function statusChangeCallback(response) {
-//        // console.log(response);
-//        if (response.status === "connected") {
-//            fetchUserProfile();
-//        } else {
-//            // Logging the user to Facebook by a Dialog Window
-//            facebookLoginByDialog();
-//        }
-//    }
-//
-//
-//    function fetchUserProfile() {
-//        // console.log('Welcome!  Fetching your information.... ');
-//        FB.api('/me?fields=id,name,email', function (response) {
-//            $("#facebook_id").val(response.id);
-//            $("#facebook_fullname ").val(response.name);
-//            $("#facebook_email").val(response.email);
-//            $("#fbLogin").submit();
-//        });
-//    }
-//
-//    function facebookLoginByDialog() {
-//        FB.login(function (response) {
-//            statusChangeCallback(response);
-//        }, {scope: 'public_profile,email'});
-//    }
+<!-- Vendor Scripts -->
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
-
-</script>
-<style>
-    .jq-icon-info {
-        background-color: #398bf7;
-        color: #ffffff; }
-
-    .jq-icon-success {
-        background-color: #06d79c;
-        color: #ffffff; }
-
-    .jq-icon-error {
-        background-color: #ef5350;
-        color: #ffffff; }
-
-    .jq-icon-warning {
-        background-color: #ffb22b;
-        color: #ffffff; }
-</style>
+<!-- Main Theme Script -->
+<script src="assets/js/theme.min.js"></script>
 </body>
+
 </html>
