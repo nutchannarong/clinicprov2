@@ -48,7 +48,6 @@
           </ul>
         </div>
       </div>
-
       <div class="pe-lg-1 ms-auto me-4">
         <div class="input-group">
           <input type="text" class="form-control form-control-sm rounded-start ps-5" placeholder="ค้นหาชื่อร้านหรือ บริการ">
@@ -66,9 +65,8 @@
     </div>
   </header>
 
-
   <!-- Page content -->
-  <section class="container mt-4 mb-2 mb-md-4 mb-lg-5 pt-lg-2 pb-5">
+  <section class="container">
 
   </section>
 </main>
