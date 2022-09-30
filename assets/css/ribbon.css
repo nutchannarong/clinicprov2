@@ -1,0 +1,310 @@
+.ribbon-primary {
+    position: absolute;
+    left: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 100px; height: 100px;
+    text-align: right;
+}
+.ribbon-primary span {
+     font-size: 11px;
+     font-weight: bold;
+     color: #FFF;
+     text-transform: uppercase;
+     text-align: center;
+     line-height: 30px;
+     transform: rotate(-45deg);
+     -webkit-transform: rotate(-45deg);
+     width: 125px;
+     display: block;
+     background: #79A70A;
+     background: linear-gradient(#2989D8 0%, #2989d8 100%);
+     box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+     position: absolute;
+     top: 19px; left: -28px;
+ }
+.ribbon-primary span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #2989d8;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #2989d8;
+}
+.ribbon-primary span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #2989d8;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #2989d8;
+}
+
+.ribbon-warning {
+    position: absolute;
+    left: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 100px; height: 100px;
+    text-align: right;
+}
+.ribbon-warning span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    width: 125px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#FA8B57 0%, #EE4F06 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; left: -28px;
+}
+.ribbon-warning span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #FA8B57;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #FA8B57;
+}
+.ribbon-warning span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #FA8B57;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #FA8B57;
+}
+
+.ribbon-dark {
+    position: absolute;
+    left: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 100px; height: 100px;
+    text-align: right;
+}
+.ribbon-dark span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    width: 125px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#3D3C3B 0%, #3D3C3B 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; left: -28px;
+}
+.ribbon-dark span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #3D3C3B;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #3D3C3B;
+}
+.ribbon-dark span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #3D3C3B;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #3D3C3B;
+}
+
+.ribbon-danger {
+    position: absolute;
+    left: 10px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 100px; height: 100px;
+    text-align: right;
+}
+.ribbon-danger span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    width: 125px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(red 0%, #EE4F06 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; left: -28px;
+}
+.ribbon-danger span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid red;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid red;
+}
+.ribbon-danger span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid red;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid red;
+}
+
+.ribbon-dangers {
+    position: absolute;
+    left: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 100px; height: 100px;
+    text-align: right;
+}
+.ribbon-dangers span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    width: 125px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(red 0%, #EE4F06 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; left: -28px;
+}
+.ribbon-dangers span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid red;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid red;
+}
+.ribbon-dangers span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid red;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid red;
+}
+
+
+
+
+.ribbon-pink {
+    position: absolute;
+    left: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 100px; height: 100px;
+    text-align: right;
+}
+.ribbon-pink span {
+    font-size: 11px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    width: 125px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#FF2C64 0%, #FF2C64 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; left: -28px;
+}
+.ribbon-pink span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #FF2C64;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #FF2C64;
+}
+.ribbon-pink span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #FF2C64;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #FF2C64;
+}
+
+.ribbon-pink-col {
+    position: absolute;
+    left: 10px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 100px; height: 100px;
+    text-align: right;
+}
+.ribbon-pink-col span {
+    font-size: 11px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    width: 125px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#FF2C64 0%, #FF2C64 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; left: -28px;
+}
+.ribbon-pink-col span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #FF2C64;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #FF2C64;
+}
+.ribbon-pink-col span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #FF2C64;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #FF2C64;
+}

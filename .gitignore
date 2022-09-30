@@ -1,0 +1,26 @@
+#netbeans
+/nbproject/private/
+/nbproject/project.properties
+/nbproject/project.xml
+
+*/config/development
+*/logs/log-*.php
+!*/logs/index.html
+*/cache/*
+!*/cache/index.html
+!*/cache/.htaccess
+
+#codeigniter 3
+application/logs/*
+!application/logs/index.html
+!application/logs/.htaccess
+
+/vendor/
+/node_modules/
+node_modules/**/*
+package-lock.json
+*.lock
+yarn.lock
+
+#/application/config/config.php
+/application/config/config.php

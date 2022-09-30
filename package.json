@@ -1,0 +1,16 @@
+{
+  "name": "clinicpro",
+  "version": "1.0.0",
+  "description": "clinicpro Web Application",
+  "main": "index.php",
+  "dependencies": {
+    "gruntfile": "^0.1.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "keywords": [
+    "clinicpro"
+  ]
+}
