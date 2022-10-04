@@ -34,21 +34,26 @@
             <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-current="page">ประเภทคลินิค</a>
               <ul class="dropdown-menu">
-                <li><a href="account-details.html" class="dropdown-item">Account Details</a></li>
-                <li><a href="account-security.html" class="dropdown-item">Security</a></li>
-                <li><a href="account-notifications.html" class="dropdown-item">Notifications</a></li>
-                <li><a href="account-messages.html" class="dropdown-item">Messages</a></li>
-                <li><a href="account-saved-items.html" class="dropdown-item">Saved Items</a></li>
-                <li><a href="account-collections.html" class="dropdown-item">My Collections</a></li>
-                <li><a href="account-payment.html" class="dropdown-item">Payment Details</a></li>
-                <li><a href="account-signin.html" class="dropdown-item">Sign In</a></li>
-                <li><a href="account-signup.html" class="dropdown-item">Sign Up</a></li>
+                <?php
+                $get_shop_nature = $this->global_model->getShopNature();
+                if ($get_shop_nature->num_rows() > 0) {
+                  foreach ($get_shop_nature->result() as $row_shop_nature) {
+                ?>
+                    <li>
+                      <a href="<?php echo base_url() . 'promotions?nature_name=' . $row_shop_nature->shop_nature_name; ?>" class="dropdown-item">
+                        <?php echo $row_shop_nature->shop_nature_name; ?>
+                      </a>
+                    </li>
+                <?php
+                  }
+                }
+                ?>
               </ul>
             </li>
           </ul>
         </div>
       </div>
-      <div class="pe-lg-1 ms-auto me-4">
+      <div class="pe-lg-1 ms-auto me-4 d-none d-lg-inline-flex">
         <div class="input-group">
           <input type="text" class="form-control form-control-sm rounded-start ps-5" placeholder="ค้นหาชื่อร้านหรือ บริการ">
           <i class="bx bx-search fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>

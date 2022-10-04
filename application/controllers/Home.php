@@ -22,7 +22,6 @@ class Home extends CI_Controller {
     );
     $data = array(
       'meta' => $meta,
-      // 'css' => array('ribbon.css'),
       'js' => array(),
     );
     $this->renderView('home_view', $data);

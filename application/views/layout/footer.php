@@ -7,7 +7,7 @@
           <img src="assets/img/logo.svg" width="47" alt="Silicon">
           ClinicPRO
         </div>
-        <p class="fs-lg text-light pb-lg-3 mb-4">ศูนย์รวมโปรโมชั่นคลินิก<br>แหล่งบริการสุขภาพและความงามทุกประเภท<br>รีวิวข้อมูล ข่าวสารที่เกี่ยวข้อง</p>
+        <p class="fs-md text-light pb-lg-3 mb-4">ศูนย์รวมโปรโมชั่นคลินิก<br>แหล่งบริการสุขภาพและความงามทุกประเภท<br>รีวิวข้อมูล ข่าวสารที่เกี่ยวข้อง</p>
         <h5 class="text-light">เข้าถึงโปรโมชั่นเร็วก่อนใคร</h5>
         <div class="row pb-2">
           <div class="col-lg-6 col-md-6">
@@ -50,19 +50,19 @@
           </div>
           <div class="col-xl-6 col-lg-5 pt-0 pt-lg-0">
             <h5 class="text-light">ฝ่ายบริการลูกค้า</h5>
-            <p class="fw-medium">098-181-6769</p>
-            <p class="fw-medium">apsth456@gmail.com</p>
-            <p class="fw-medium">@apsth456</p>
-            <p class="fw-medium">09.00 - 17.00 น.</p>
-            <p class="fw-medium">จันทร์ - ศุกร์ (ยกเว้นวันหยุดนักขัตฤกษ์)</p>
+            <p class="">098-181-6769</p>
+            <p class="">apsth456@gmail.com</p>
+            <p class="">@apsth456</p>
+            <p class="">09.00 - 17.00 น.</p>
+            <p class="">จันทร์ - ศุกร์ (ยกเว้นวันหยุดนักขัตฤกษ์)</p>
             <h5 class="text-light">ติดตามเราได้ที่</h5>
-            <p class="fw-medium"><a href="#" class="nav-link d-inline-block">https://www.clinicpro.app</a></p>
-            <p class="fw-medium"><a href="#" class="nav-link d-inline-block">facebook Apsth</a></p>
+            <p class=""><a href="#" class="nav-link d-inline-block">https://www.clinicpro.app</a></p>
+            <p class=""><a href="#" class="nav-link d-inline-block">facebook Apsth</a></p>
           </div>
         </div>
       </div>
     </div>
-    <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
+    <p class="nav d-block fs-md text-center text-md-start pb-2 pb-lg-0 mb-0">
       <span class="text-light opacity-50">&copy; All rights reserved. Made by </span>
       <a class="nav-link d-inline-block p-0" href="https://createx.studio/" target="_blank" rel="noopener">Createx Studio</a>
     </p>

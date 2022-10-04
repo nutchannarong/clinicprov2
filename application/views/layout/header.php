@@ -3,23 +3,31 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Silicon | </title>
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Silicon - Multipurpose Technology Bootstrap Template">
-  <meta name="keywords" content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative">
-  <meta name="author" content="Createx Studio">
+  <!-- Favicon and Touch Icons -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><?php echo isset($title) ? $title . ' | ' . $this->config->item('app_title') : $this->config->item('app_title'); ?></title>
+  <meta name="description" content="<?php echo isset($description) ? $description . ' ' . $this->config->item('app_description') : $this->config->item('app_description'); ?>" />
+  <meta name="keywords" content="<?php echo isset($keyword) ? $keyword . ',' . $this->config->item('app_keyword') : $this->config->item('app_keyword'); ?>" />
+  <meta name="author" content="<?php echo $this->config->item('app_author'); ?>" />
+  <link rel="shortcut icon" href="<?php echo base_url() . 'assets/img/' . $this->config->item('app_favicon'); ?>" />
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url() . 'assets/img/' . $this->config->item('app_favicon'); ?>">
+  <link rel="alternate" hreflang="th" href="<?php echo current_url(); ?>" />
 
   <!-- Viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Favicon and Touch Icons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="assets/favicon/site.webmanifest">
-  <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
-  <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+  <?php
+  echo "\n\t";
+  if (isset($meta)) {
+    foreach ($meta as $meta_key => $meta_value) {
+      echo "\t" . $this->assets->meta($meta_key, $meta_value);
+    }
+  }
+  echo "\r";
+  echo "\n\t"; ?>
   <meta name="msapplication-TileColor" content="#080032">
   <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
@@ -28,7 +36,7 @@
   <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
 
   <!-- Main Theme Styles + Bootstrap -->
-  <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+  <link rel="stylesheet" media="screen" href="assets/css/theme.css">
 
   <!-- Page loading styles -->
   <style>
@@ -117,7 +125,51 @@
         transform: rotate(360deg);
       }
     }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "Prompt" !important;
+    }
+
+    p,
+    div,
+    li,
+    a {
+      font-family: "Sarabun" !important;
+    }
   </style>
+
+  <?php
+  if (isset($css_full)) {
+    foreach ($css_full as $row) {
+      echo "\t" . $this->assets->css_full($row);
+    }
+  }
+  if (isset($css)) {
+    foreach ($css as $row) {
+      echo "\t" . $this->assets->css($row);
+    }
+  }
+  echo "\n\t";
+  if (isset($js_full)) {
+    foreach ($js_full as $row) {
+      echo "\t" . $this->assets->js_full($row);
+    }
+  }
+  if (isset($js)) {
+    foreach ($js as $row) {
+      echo "\t" . $this->assets->js($row);
+    }
+  }
+  if (isset($js_import)) {
+    foreach ($js_import as $link_js_import) {
+      echo '<script src="' . $link_js_import . '" type="text/javascript"></script>';
+    }
+  }
+  echo "\n\t";
+  ?>
 
   <!-- Theme mode -->
   <script>
@@ -148,7 +200,13 @@
 <!-- Body -->
 
 <body>
-
+  <input type="hidden" id="service_base_url" value="<?php echo base_url(); ?>" />
+  <input type="hidden" id="service_admin_url" value="<?php echo admin_url(); ?>" />
+  <script>
+    const service_base_url = document.getElementById('service_base_url').value;
+    const service_admin_url = document.getElementById('service_admin_url').value;
+    const pb_key = '<?php echo $this->config->item('OMISE_PUBLIC_KEY'); ?>'
+  </script>
   <!-- Page loading spinner -->
   <div class="page-loading active">
     <div class="page-loading-inner">
