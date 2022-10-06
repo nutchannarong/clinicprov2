@@ -78,11 +78,12 @@
 
 
 <!-- Vendor Scripts -->
-<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="<?php echo base_url() . 'assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js'; ?>"></script>
+<script src="<?php echo base_url() . 'assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js'; ?>"></script>
 
 <!-- Main Theme Script -->
-<script src="assets/js/theme.min.js"></script>
+<script src="<?php echo base_url() . 'assets/js/theme.min.js'; ?>"></script>
+
 </body>
 
 </html>

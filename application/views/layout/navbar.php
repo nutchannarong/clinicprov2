@@ -6,7 +6,7 @@
   <header class="header navbar navbar-expand-lg bg-light fixed-top">
     <div class="container px-3">
       <a href="index.html" class="navbar-brand pe-3">
-        <img src="assets/img/logo.svg" width="47" alt="Envyz.me">
+        <img src="<?php echo base_url() . 'assets/img/logo.svg'; ?>" width="47" alt="Envyz.me">
         Envyz.me
       </a>
       <div id="navbarNav" class="offcanvas offcanvas-end">
@@ -63,7 +63,7 @@
       <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a href="https://themes.getbootstrap.com/product/silicon-business-technology-template-ui-kit/" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
+      <a href="<?php echo base_url() . 'authen'; ?>" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" rel="noopener">
         <i class="bx bx-user-circle fs-5 lh-1 me-1"></i>
         &nbsp;เข้าสู่ระบบ
       </a>

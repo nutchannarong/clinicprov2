@@ -29,14 +29,14 @@
   echo "\r";
   echo "\n\t"; ?>
   <meta name="msapplication-TileColor" content="#080032">
-  <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+  <meta name="msapplication-config" content="<?php echo base_url() . 'assets/favicon/browserconfig.xml'; ?>">
   <meta name="theme-color" content="#ffffff">
 
   <!-- Vendor Styles -->
-  <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" media="screen" href="<?php echo base_url() . 'assets/vendor/boxicons/css/boxicons.min.css'; ?>" />
 
   <!-- Main Theme Styles + Bootstrap -->
-  <link rel="stylesheet" media="screen" href="assets/css/theme.css">
+  <link rel="stylesheet" media="screen" href="<?php echo base_url() . 'assets/css/theme.css'; ?>">
 
   <!-- Page loading styles -->
   <style>
@@ -194,6 +194,8 @@
       };
     })();
   </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 
