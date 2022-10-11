@@ -56,6 +56,7 @@
                 ?>
               </div>
               <label for="tel" class="form-label fs-base pb-2">รหัส OTP จะถูกส่งไปที่หมายเลขโทรศัพท์ของคุณผ่าน SMS</label>
+              <input type="hidden" name="tel" id="tel" value="<?php echo $tel; ?>">
               <input id="otp" name="otp" type="number" autocomplete="new-username" class="form-control form-control-lg" placeholder="กรอกรหัส OTP" required="">
               <div class="invalid-feedback position-absolute start-0 top-100">กรุณากรอกข้อมูล</div>
             </div>

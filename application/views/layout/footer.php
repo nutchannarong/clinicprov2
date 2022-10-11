@@ -4,27 +4,27 @@
     <div class="row pb-5">
       <div class="col-lg-4 col-md-6">
         <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-          <img src="assets/img/logo.svg" width="47" alt="Silicon">
+          <img src="<?php echo base_url() . 'assets/img/logo.svg'; ?>" width="47" alt="Silicon">
           ClinicPRO
         </div>
         <p class="fs-md text-light pb-lg-3 mb-4">ศูนย์รวมโปรโมชั่นคลินิก<br>แหล่งบริการสุขภาพและความงามทุกประเภท<br>รีวิวข้อมูล ข่าวสารที่เกี่ยวข้อง</p>
         <h5 class="text-light">เข้าถึงโปรโมชั่นเร็วก่อนใคร</h5>
         <div class="row pb-2">
           <div class="col-lg-6 col-md-6">
-            <img src="assets/img/qrcode.png" style="max-height: 140px;" class="img-responsive">
+            <img src="<?php echo base_url() . 'assets/img/qrcode.png'; ?>" style="max-height: 140px;" class="img-responsive">
           </div>
           <div class="col-lg-6 col-md-6">
             <div class="row">
               <div class="col-lg-12 col-md-6 pb-2">
-                <img src="assets/img/play-store.jpg" style="max-height: 70px;" class="img-responsive">
+                <img src="<?php echo base_url() . 'assets/img/play-store.jpg'; ?>" style="max-height: 70px;" class="img-responsive">
               </div>
               <div class="col-lg-12 col-md-6">
-                <img src="assets/img/apple-store.jpg" style="max-height: 70px;" class="img-responsive">
+                <img src="<?php echo base_url() . 'assets/img/apple-store.jpg'; ?>" style="max-height: 70px;" class="img-responsive">
               </div>
             </div>
           </div>
         </div>
-        <img src="assets/img/payments.png" class="img-responsive">
+        <img src="<?php echo base_url() . 'assets/img/payments.png'; ?>" class="img-responsive">
       </div>
       <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
         <div id="footer-links" class="row">
