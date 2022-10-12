@@ -63,10 +63,88 @@
       <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a href="<?php echo base_url() . 'authen'; ?>" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" rel="noopener">
-        <i class="bx bx-user-circle fs-5 lh-1 me-1"></i>
-        &nbsp;เข้าสู่ระบบ
-      </a>
+      <?php if ($this->session->userdata('islogin') == 1) {
+        $get_online = $this->global_model->getOnlineByID($this->session->userdata('online_id'))->row(); ?>
+        <div id="navbarNav1" class="offcanvas offcanvas-end">
+          <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                  <div class="row">
+                    <div class="col-12">
+                      <span class="fs-sm" style="padding-bottom; 0px"><?php echo $get_online->online_fname . ' ' . $get_online->online_lname; ?></span>
+                    </div>
+                    <div class="col-12">
+                      <span class="fs-sm"><?php echo number_format($get_online->online_point); ?> เเต้ม </span>
+                    </div>
+                  </div>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="<?php echo base_url() . 'profile'; ?>" class="dropdown-item">
+                      ข้อมูลส่วนตัว
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?php echo base_url() . 'appoint'; ?>" class="dropdown-item">
+                      ปฏิทินนัดหมาย
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?php echo base_url() . 'cart'; ?>" class="dropdown-item">
+                      ตะกร้าสินค้า
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?php echo base_url() . 'order'; ?>" class="dropdown-item">
+                      ประวัติการสั่งซื้อ
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?php echo base_url() . 'opdcard'; ?>" class="dropdown-item">
+                      ประวัติการรักษา OPD
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?php echo base_url() . 'services'; ?>" class="dropdown-item">
+                      บริการ/คอร์ส
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?php echo base_url() . 'servingreview'; ?>" class="dropdown-item">
+                      รีวิวหลังการใช้บริการ
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?php echo base_url() . 'logpoint'; ?>" class="dropdown-item">
+                      ประวัติแต้ม
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?php echo base_url() . 'promotionbirthdate'; ?>" class="dropdown-item">
+                      บริการแนะนำ
+                    </a>
+                  </li>
+                  <hr>
+                  <li>
+                    <a style="color: #6366f1; font-weight: bold;" href="<?php echo base_url() . 'authen/logout'; ?>" class="dropdown-item">
+                      ออกจากระบบ
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bx bx-user-circle fs-5 lh-1 me-1"></i>
+        </button>
+      <?php } else { ?>
+        <a href="<?php echo base_url() . 'authen'; ?>" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" rel="noopener">
+          <i class="bx bx-user-circle fs-5 lh-1 me-1"></i>
+          &nbsp;เข้าสู่ระบบ
+        </a>
+      <?php } ?>
     </div>
   </header>
 

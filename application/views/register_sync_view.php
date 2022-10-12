@@ -104,7 +104,7 @@
             <div class="position-relative mb-4">
               <div class="form-group pb-2">
                 <label for="customer_id_pri" class="form-label fs-base pb-2">เลือกคลินิกที่ไปใช้งาน เพื่อซิงค์ข้อมูลส่วนตัว</label>
-                <select class="form-control form-control-lg" id="customer_id_pri" name="customer_id_pri" required="">
+                <select class="form-select form-select-lg" id="customer_id_pri" name="customer_id_pri" required="">
                   <?php
                   foreach ($customers->result() as $row) {
                   ?>
@@ -115,7 +115,7 @@
                 </select>
               </div>
               <div class="form-group pb-2">
-                <label for="password" class="form-label fs-base pb-2">เบอร์โทรศัพท์</label>
+                <label for="password" class="form-label fs-base pb-2">รหัสผ่าน</label>
                 <input type="password" id="password" name="password" class="form-control form-control-lg" autocomplete="new-password" placeholder="Password" required="">
               </div>
               <div class="form-group pb-2">
