@@ -27,6 +27,12 @@
     }
   }
   echo "\r";
+  echo "\t" . $this->assets->css_full('plugin/select2/css/select2.min.css');
+  echo "\t" . $this->assets->css_full('plugin/fontawesome/css/all.min.css');
+  echo "\t" . $this->assets->css_full('plugin/toast-master/css/jquery.toast.css');
+  echo "\t" . $this->assets->css_full('plugin/sweetalert/sweetalert.css');
+  echo "\t" . $this->assets->css('parsley.min.css');
+  echo "\t" . $this->libs->css_full('plugin/fancybox/dist/jquery.fancybox.css');
   echo "\n\t"; ?>
   <meta name="msapplication-TileColor" content="#080032">
   <meta name="msapplication-config" content="<?php echo base_url() . 'assets/favicon/browserconfig.xml'; ?>">
@@ -141,6 +147,8 @@
     }
   </style>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <?php
   if (isset($css_full)) {
     foreach ($css_full as $row) {
@@ -169,6 +177,13 @@
     }
   }
   echo "\n\t";
+  echo "\t" . $this->assets->js_full('plugin/select2/js/select2.min.js');
+  echo "\t" . $this->assets->js_full('plugin/toast-master/js/jquery.toast.js');
+  echo "\t" . $this->assets->js('parsley.min.js');
+  echo "\t" . $this->libs->js_full('plugin/fancybox/dist/jquery.fancybox.js');
+  echo "\t" . $this->assets->js_full('plugin/sweetalert/sweetalert.min.js');
+  echo "\t" . $this->assets->js_full('plugin/sweetalert/jquery.sweet-alert.custom.js');
+  echo "\n\t";
   ?>
 
   <!-- Theme mode -->
@@ -194,10 +209,7 @@
       };
     })();
   </script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-
 
 <!-- Body -->
 

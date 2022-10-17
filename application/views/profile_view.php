@@ -190,7 +190,7 @@
           <div class="d-table position-relative mx-auto mt-2 mt-lg-4 pt-5 mb-3">
             <img src="<?php echo admin_url() . 'assets/upload/online/' . $get_online->online_image; ?>" class="d-block rounded-circle" width="120" alt="<?php echo $get_online->online_fname . ' ' . $get_online->online_lname; ?>">
           </div>
-          <h2 class="h5 mb-4"><?php echo $get_online->online_fname . ' ' . $get_online->online_lname; ?></h2>
+          <h2 class="h5 mb-3"><?php echo $get_online->online_fname . ' ' . $get_online->online_lname; ?></h2>
           <?php $this->load->view('layout/navbar-account', array('navacc' => 'profile')); ?>
         </div>
       </div>
@@ -198,111 +198,155 @@
     <!-- Account details -->
     <div class="col-md-8 offset-lg-1 pb-5 mb-2 mb-lg-4 pt-md-5 mt-n3 mt-md-0">
       <div class="ps-md-3 ps-lg-0 mt-md-2 py-md-4">
-        <h1 class="h2 pt-xl-1 pb-3">Account Details</h1>
+        <h2 class="h2 pt-xl-1 pb-2">ข้อมูลส่วนตัว</h2>
         <!-- Basic info -->
-        <h2 class="h5 text-primary mb-4">Basic info</h2>
-        <form class="needs-validation border-bottom pb-3 pb-lg-4" novalidate>
-          <div class="row pb-2">
-            <div class="col-sm-6 mb-4">
-              <label for="fn" class="form-label fs-base">First name</label>
-              <input type="text" id="fn" class="form-control form-control-lg" value="John" required>
-              <div class="invalid-feedback">Please enter your first name!</div>
+        <form id="form-edit-profile" method="post" action="<?php echo base_url() . 'profile/update'; ?>" autocomplete="off" class="needs-validation border-bottom pb-3 pb-lg-4" novalidate>
+          <div class="row">
+            <div class="col-sm-9">
+              <div class="row pb-2">
+                <div class="col-sm-6 mb-3">
+                  <label for="online_gender" class="form-label fs-base">เพศ <span class="text-danger">*</span></label>
+                  <select name="online_gender" id="online_gender" class="form-select form-select-md" required>
+                    <option value="">เลือกเพศ</option>
+                    <option value="ชาย" <?php echo $data->online_gender == 'ชาย' ? 'selected' : ''; ?>>ชาย</option>
+                    <option value="หญิง" <?php echo $data->online_gender == 'หญิง' ? 'selected' : ''; ?>>หญิง</option>
+                    <option value="Male" <?php echo $data->online_gender == 'Male' ? 'selected' : ''; ?>>Male</option>
+                    <option value="Female" <?php echo $data->online_gender == 'Female' ? 'selected' : ''; ?>>Female</option>
+                  </select>
+                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <label for="online_prefix" class="form-label fs-base">คำนำหน้า <span class="text-danger">*</span></label>
+                  <select name="online_prefix" id="online_prefix" class="form-select form-select-md" required>
+                    <option value="">เลือกคำนำหน้า</option>
+                    <option value="นาย" <?php echo $data->online_prefix == 'นาย' ? 'selected' : ''; ?>>นาย</option>
+                    <option value="นางสาว" <?php echo $data->online_prefix == 'นางสาว' ? 'selected' : ''; ?>>นางสาว</option>
+                    <option value="นาง" <?php echo $data->online_prefix == 'นาง' ? 'selected' : ''; ?>>นาง</option>
+                    <option value="Mr." <?php echo $data->online_prefix == 'Mr.' ? 'selected' : ''; ?>>Mr.</option>
+                    <option value="Mrs." <?php echo $data->online_prefix == 'Mrs.' ? 'selected' : ''; ?>>Mrs.</option>
+                    <option value="Miss." <?php echo $data->online_prefix == 'Miss.' ? 'selected' : ''; ?>>Miss.</option>
+                    <option value="ด.ช." <?php echo $data->online_prefix == 'ด.ช.' ? 'selected' : ''; ?>>ด.ช.</option>
+                    <option value="ด.ญ." <?php echo $data->online_prefix == 'ด.ญ.' ? 'selected' : ''; ?>>ด.ญ.</option>
+                  </select>
+                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <label for="online_fname" class="form-label fs-base">ชื่อ <span class="text-danger">*</span></label>
+                  <input type="text" name="online_fname" id="online_fname" class="form-control form-control-md" value="<?php echo $data->online_fname; ?>" required>
+                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <label for="online_lname" class="form-label fs-base">สกุล <span class="text-danger">*</span></label>
+                  <input type="text" name="online_lname" id="online_lname" class="form-control form-control-md" value="<?php echo $data->online_lname; ?>" required>
+                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <label for="online_blood" class="form-label fs-base">กรุ๊ปเลือด <span class="text-danger">*</span></label>
+                  <select name="online_blood" id="online_blood" class="form-select form-select-md" required>
+                    <option value="">เลือกกรุ๊ปเลือด</option>
+                    <option value="A+" <?php echo $data->online_blood == 'A+' ? 'selected' : ''; ?>>A+</option>
+                    <option value="A-" <?php echo $data->online_blood == 'A-' ? 'selected' : ''; ?>>A-</option>
+                    <option value="AB+" <?php echo $data->online_blood == 'AB+' ? 'selected' : ''; ?>>AB+</option>
+                    <option value="AB-" <?php echo $data->online_blood == 'AB-' ? 'selected' : ''; ?>>AB-</option>
+                    <option value="B+" <?php echo $data->online_blood == 'B+' ? 'selected' : ''; ?>>B+</option>
+                    <option value="B-" <?php echo $data->online_blood == 'B-' ? 'selected' : ''; ?>>B-</option>
+                    <option value="O+" <?php echo $data->online_blood == 'O+' ? 'selected' : ''; ?>>O+</option>
+                    <option value="O-" <?php echo $data->online_blood == 'O-' ? 'selected' : ''; ?>>O-</option>
+                    <option value="ไม่แน่ใจ" <?php echo $data->online_blood == 'ไม่แน่ใจ' ? 'selected' : ''; ?>>ไม่แน่ใจ</option>
+                  </select>
+                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <label for="online_birthdate" class="form-label fs-base">วันเกิด <span class="text-danger">*</span></label>
+                  <input type="text" name="online_birthdate" id="online_birthdate" value="<?php echo $data->online_birthdate; ?>" class="form-control form-control-md" disabled>
+                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <label for="online_idcard" class="form-label fs-base">เลขบัตรประชาชน <span class="text-danger">*</span></label>
+                  <input type="text" name="online_idcard" id="online_idcard" class="form-control form-control-md" value="<?php echo $data->online_idcard; ?>" required>
+                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <label for="online_tel" class="form-label fs-base">เบอร์โทร <span class="text-danger">*</span></label>
+                  <input type="text" name="online_tel" id="online_tel" class="form-control form-control-md" value="<?php echo $data->online_tel; ?>" disabled>
+                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <label for="online_email" class="form-label fs-base">อีเมล์ <span class="text-danger">*</span></label>
+                  <input type="email" name="online_email" id="online_email" class="form-control form-control-md" value="<?php echo $data->online_email; ?>" required>
+                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <label for="online_address" class="form-label fs-base">ที่อยู่ <span class="text-danger">*</span></label>
+                  <input type="text" name="online_address" id="online_address" class="form-control form-control-md" value="<?php echo $data->online_address; ?>" required>
+                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <label for="online_district" class="form-label fs-base">ตำบล <span class="text-danger">*</span></label>
+                  <input type="text" name="online_district" id="online_district" class="form-control form-control-md" value="<?php echo $data->online_district; ?>" required>
+                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <label for="online_amphoe" class="form-label fs-base">อำเภอ <span class="text-danger">*</span></label>
+                  <input type="text" name="online_amphoe" id="online_amphoe" class="form-control form-control-md" value="<?php echo $data->online_amphoe; ?>" required>
+                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <label for="online_province" class="form-label fs-base">จังหวัด <span class="text-danger">*</span></label>
+                  <input type="text" name="online_province" id="online_province" class="form-control form-control-md" value="<?php echo $data->online_province; ?>" required>
+                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <label for="online_zipcode" class="form-label fs-base">รหัสไปรษณีย์ <span class="text-danger">*</span></label>
+                  <input type="text" name="online_zipcode" id="online_zipcode" class="form-control form-control-md" value="<?php echo $data->online_zipcode; ?>" required>
+                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+                </div>
+              </div>
+              <div class="form-check mb-3">
+                <input type="checkbox" name="subscribe_id" value="1" id="subscribe_id" <?php echo ($data->subscribe_id == 1 ? 'checked="checked"' : ''); ?> class="form-check-input">
+                <label for="delete-account" class="form-check-label fs-base">ยอมรับการแจ้งเตือนข่าวสารโปรโมชั่นผ่านอีเมล์</label>
+              </div>
+              <div class="d-flex mb-3">
+                <button type="reset" class="btn btn-secondary me-3">ยกเลิก</button>
+                <button type="submit" class="btn btn-primary">บันทึก</button>
+              </div>
             </div>
-            <div class="col-sm-6 mb-4">
-              <label for="sn" class="form-label fs-base">Second name</label>
-              <input type="text" id="sn" class="form-control form-control-lg" value="Doe" required>
-              <div class="invalid-feedback">Please enter your second name!</div>
+            <div class="col-sm-3">
+              <div class="col-sm-12 mb-3 text-center">
+                <label for="online_image" class="form-label fs-base">รูปประจำตัว</label>
+                <div class="d-table position-relative mx-auto mt-2 mt-lg-2 pt-2 mb-4">
+                  <a id="image_a" href="<?php echo $data->online_image != '' ? admin_url() . 'assets/upload/online/' . $data->online_image : admin_url() . 'assets/upload/online/none.png'; ?>" class="fancybox">
+                    <img id="image_show" src="<?php echo $data->online_image != '' ? admin_url() . 'assets/upload/online/' . $data->online_image : admin_url() . 'assets/upload/online/none.png'; ?>" class="d-block rounded-circle" width="150">
+                  </a>
+                </div>
+                <input type="file" accept="image/*" name="online_image" id="upload-image" onchange="uploadImage();" style="display: none">
+                <label for="upload-image" class="btn btn-primary btn-block m-t-10" style="width: 100%;"><i class="fa fa-image pe-1"></i> อัพโหลดรูป</label>
+              </div>
+              <div class="col-sm-12 mb-3 text-center">
+                <?php
+                if ($data->online_password != NULL) {
+                ?>
+                  <button type="button" class="btn btn-danger" style="width: 100%;" onclick="modalEditPassword()"><i class="fa fa-key pe-1"></i> เปลี่ยนรหัสผ่าน</button>
+                <?php
+                }
+                ?>
+              </div>
+              <!-- <div class="col-sm-12 mb-3 text-center">
+                <?php
+                if ($data->facebook_id != '') {
+                ?>
+                  <button ype="button" onclick="unlinkfacebook();" class="btn btn-info" style="width: 100%;"><img class="" src="<?php echo base_url() . "assets/img/social-icon/facebook.png"; ?>" width="20" style="background: #FFFFFF; margin-right: 5px;"> เชื่อม Facebook แล้ว</button>
+                <?php
+                } else {
+                ?>
+                  <button type="button" onclick="linkFacebook();" class="btn btn-info " style="width: 100%;"><img class="" src="<?php echo base_url() . "assets/img/social-icon/facebook.png"; ?>" width="20" style="background: #FFFFFF; margin-right: 5px;"> เชื่อมต่อ Facebook</button>
+                <?php
+                }
+                ?>
+              </div> -->
             </div>
-            <div class="col-sm-6 mb-4">
-              <label for="email" class="form-label fs-base">Email address</label>
-              <input type="email" id="email" class="form-control form-control-lg" value="jonny@email.com" required>
-              <div class="invalid-feedback">Please provide a valid email address!</div>
-            </div>
-            <div class="col-sm-6 mb-4">
-              <label for="phone" class="form-label fs-base">Phone <small class="text-muted">(optional)</small></label>
-              <input type="text" id="phone" class="form-control form-control-lg" data-format='{"numericOnly": true, "delimiters": ["+1 ", " ", " "], "blocks": [0, 3, 3, 2]}' placeholder="+1 ___ ___ __">
-            </div>
-            <div class="col-12 mb-4">
-              <label for="bio" class="form-label fs-base">Bio <small class="text-muted">(optional)</small></label>
-              <textarea id="bio" class="form-control form-control-lg" rows="4" placeholder="Add a short bio..."></textarea>
-            </div>
-          </div>
-          <div class="d-flex mb-3">
-            <button type="reset" class="btn btn-secondary me-3">Cancel</button>
-            <button type="submit" class="btn btn-primary">Save changes</button>
           </div>
         </form>
-
-        <!-- Address -->
-        <h2 class="h5 text-primary pt-1 pt-lg-3 my-4">Address</h2>
-        <form class="needs-validation border-bottom pb-2 pb-lg-4" novalidate>
-          <div class="row pb-2">
-            <div class="col-sm-6 mb-4">
-              <label for="country" class="form-label fs-base">Country</label>
-              <select id="country" class="form-select form-select-lg" required>
-                <option value="" disabled>Choose country</option>
-                <option value="Australia">Australia</option>
-                <option value="Belgium">Belgium</option>
-                <option value="Canada">Canada</option>
-                <option value="Denmark">Denmark</option>
-                <option value="USA" selected>USA</option>
-              </select>
-              <div class="invalid-feedback">Please choose your country!</div>
-            </div>
-            <div class="col-sm-6 mb-4">
-              <label for="state" class="form-label fs-base">State</label>
-              <select id="state" class="form-select form-select-lg" required>
-                <option value="" disabled>Choose state</option>
-                <option value="Arizona">Arizona</option>
-                <option value="California">California</option>
-                <option value="Iowa">Iowa</option>
-                <option value="Florida" selected>Florida</option>
-                <option value="Michigan">Michigan</option>
-                <option value="Texas">Texas</option>
-              </select>
-              <div class="invalid-feedback">Please choose your state!</div>
-            </div>
-            <div class="col-sm-6 mb-4">
-              <label for="city" class="form-label fs-base">City</label>
-              <select id="city" class="form-select form-select-lg" required>
-                <option value="" disabled>Choose city</option>
-                <option value="Boston">Boston</option>
-                <option value="Chicago">Chicago</option>
-                <option value="Los Angeles">Los Angeles</option>
-                <option value="Miami" selected>Miami</option>
-                <option value="New York">New York</option>
-                <option value="Philadelphia">Philadelphia</option>
-              </select>
-              <div class="invalid-feedback">Please choose your city!</div>
-            </div>
-            <div class="col-sm-6 mb-4">
-              <label for="zip" class="form-label fs-base">ZIP code</label>
-              <input type="text" id="zip" class="form-control form-control-lg" required>
-              <div class="invalid-feedback">Please enter your ZIP code!</div>
-            </div>
-            <div class="col-12 mb-4">
-              <label for="address1" class="form-label fs-base">Address line 1</label>
-              <input id="address1" class="form-control form-control-lg" required>
-            </div>
-            <div class="col-12 mb-4">
-              <label for="address2" class="form-label fs-base">Address line 2 <small class="text-muted">(optional)</small></label>
-              <input id="address2" class="form-control form-control-lg">
-            </div>
-          </div>
-          <div class="d-flex mb-3">
-            <button type="reset" class="btn btn-secondary me-3">Cancel</button>
-            <button type="submit" class="btn btn-primary">Save changes</button>
-          </div>
-        </form>
-
-        <!-- Delete account -->
-        <h2 class="h5 text-primary pt-1 pt-lg-3 mt-4">Delete account</h2>
-        <p>When you delete your account, your public profile will be deactivated immediately. If you change your mind before the 14 days are up, sign in with your email and password, and we’ll send you a link to reactivate your account.</p>
-        <div class="form-check mb-4">
-          <input type="checkbox" id="delete-account" class="form-check-input">
-          <label for="delete-account" class="form-check-label fs-base">Yes, I want to delete my account</label>
-        </div>
-        <button type="button" class="btn btn-danger">Delete</button>
       </div>
     </div>
   </div>
