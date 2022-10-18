@@ -181,6 +181,72 @@
 </div> -->
 
 <!-- Page content -->
+<style>
+  .avatar-upload {
+    position: relative;
+    max-width: 205px;
+  }
+
+  .avatar-upload .avatar-edit {
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
+  }
+
+  .avatar-upload .avatar-edit input {
+    display: none;
+  }
+
+  .avatar-upload .avatar-edit input+label {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    background: #ffffff;
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .avatar-upload .avatar-edit input+label:hover {
+    background: #f1f1f1;
+    border-color: #d6d6d6;
+  }
+
+  .avatar-upload .avatar-edit input+label:after {
+    /* content: "\f040"; */
+    /* font-family: "FontAwesome"; */
+    color: #757575;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+  }
+
+  .avatar-upload .avatar-preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #f8f8f8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .avatar-upload .avatar-preview>div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+</style>
 <section class="container pt-5">
   <div class="row">
     <?php $get_online = $this->global_model->getOnlineByID($this->session->userdata('online_id'))->row(); ?>
@@ -188,7 +254,15 @@
       <div class="position-sticky top-0">
         <div class="text-center pt-5">
           <div class="d-table position-relative mx-auto mt-2 mt-lg-4 pt-5 mb-3">
-            <img src="<?php echo admin_url() . 'assets/upload/online/' . $get_online->online_image; ?>" class="d-block rounded-circle" width="120" alt="<?php echo $get_online->online_fname . ' ' . $get_online->online_lname; ?>">
+            <div class="avatar-upload">
+              <div class="avatar-edit">
+                <input type="file" accept="image/*" name="online_image" id="upload-image" onchange="uploadImage();">
+                <label for="upload-image"><i class="bx bx-pencil" style="font-size: 23px; font-weight: bold; padding-top: 5px;"></i></label>
+              </div>
+              <div class="avatar-preview">
+                <div id="image_show" style="background-image: url('<?php echo $data->online_image != '' ? admin_url() . 'assets/upload/online/' . $data->online_image : admin_url() . 'assets/upload/online/none.png'; ?>');"></div>
+              </div>
+            </div>
           </div>
           <h2 class="h5 mb-3"><?php echo $get_online->online_fname . ' ' . $get_online->online_lname; ?></h2>
           <?php $this->load->view('layout/navbar-account', array('navacc' => 'profile')); ?>
@@ -201,150 +275,128 @@
         <h2 class="h2 pt-xl-1 pb-2">ข้อมูลส่วนตัว</h2>
         <!-- Basic info -->
         <form id="form-edit-profile" method="post" action="<?php echo base_url() . 'profile/update'; ?>" autocomplete="off" class="needs-validation border-bottom pb-3 pb-lg-4" novalidate>
-          <div class="row">
-            <div class="col-sm-9">
-              <div class="row pb-2">
-                <div class="col-sm-6 mb-3">
-                  <label for="online_gender" class="form-label fs-base">เพศ <span class="text-danger">*</span></label>
-                  <select name="online_gender" id="online_gender" class="form-select form-select-md" required>
-                    <option value="">เลือกเพศ</option>
-                    <option value="ชาย" <?php echo $data->online_gender == 'ชาย' ? 'selected' : ''; ?>>ชาย</option>
-                    <option value="หญิง" <?php echo $data->online_gender == 'หญิง' ? 'selected' : ''; ?>>หญิง</option>
-                    <option value="Male" <?php echo $data->online_gender == 'Male' ? 'selected' : ''; ?>>Male</option>
-                    <option value="Female" <?php echo $data->online_gender == 'Female' ? 'selected' : ''; ?>>Female</option>
-                  </select>
-                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <label for="online_prefix" class="form-label fs-base">คำนำหน้า <span class="text-danger">*</span></label>
-                  <select name="online_prefix" id="online_prefix" class="form-select form-select-md" required>
-                    <option value="">เลือกคำนำหน้า</option>
-                    <option value="นาย" <?php echo $data->online_prefix == 'นาย' ? 'selected' : ''; ?>>นาย</option>
-                    <option value="นางสาว" <?php echo $data->online_prefix == 'นางสาว' ? 'selected' : ''; ?>>นางสาว</option>
-                    <option value="นาง" <?php echo $data->online_prefix == 'นาง' ? 'selected' : ''; ?>>นาง</option>
-                    <option value="Mr." <?php echo $data->online_prefix == 'Mr.' ? 'selected' : ''; ?>>Mr.</option>
-                    <option value="Mrs." <?php echo $data->online_prefix == 'Mrs.' ? 'selected' : ''; ?>>Mrs.</option>
-                    <option value="Miss." <?php echo $data->online_prefix == 'Miss.' ? 'selected' : ''; ?>>Miss.</option>
-                    <option value="ด.ช." <?php echo $data->online_prefix == 'ด.ช.' ? 'selected' : ''; ?>>ด.ช.</option>
-                    <option value="ด.ญ." <?php echo $data->online_prefix == 'ด.ญ.' ? 'selected' : ''; ?>>ด.ญ.</option>
-                  </select>
-                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <label for="online_fname" class="form-label fs-base">ชื่อ <span class="text-danger">*</span></label>
-                  <input type="text" name="online_fname" id="online_fname" class="form-control form-control-md" value="<?php echo $data->online_fname; ?>" required>
-                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <label for="online_lname" class="form-label fs-base">สกุล <span class="text-danger">*</span></label>
-                  <input type="text" name="online_lname" id="online_lname" class="form-control form-control-md" value="<?php echo $data->online_lname; ?>" required>
-                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <label for="online_blood" class="form-label fs-base">กรุ๊ปเลือด <span class="text-danger">*</span></label>
-                  <select name="online_blood" id="online_blood" class="form-select form-select-md" required>
-                    <option value="">เลือกกรุ๊ปเลือด</option>
-                    <option value="A+" <?php echo $data->online_blood == 'A+' ? 'selected' : ''; ?>>A+</option>
-                    <option value="A-" <?php echo $data->online_blood == 'A-' ? 'selected' : ''; ?>>A-</option>
-                    <option value="AB+" <?php echo $data->online_blood == 'AB+' ? 'selected' : ''; ?>>AB+</option>
-                    <option value="AB-" <?php echo $data->online_blood == 'AB-' ? 'selected' : ''; ?>>AB-</option>
-                    <option value="B+" <?php echo $data->online_blood == 'B+' ? 'selected' : ''; ?>>B+</option>
-                    <option value="B-" <?php echo $data->online_blood == 'B-' ? 'selected' : ''; ?>>B-</option>
-                    <option value="O+" <?php echo $data->online_blood == 'O+' ? 'selected' : ''; ?>>O+</option>
-                    <option value="O-" <?php echo $data->online_blood == 'O-' ? 'selected' : ''; ?>>O-</option>
-                    <option value="ไม่แน่ใจ" <?php echo $data->online_blood == 'ไม่แน่ใจ' ? 'selected' : ''; ?>>ไม่แน่ใจ</option>
-                  </select>
-                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <label for="online_birthdate" class="form-label fs-base">วันเกิด <span class="text-danger">*</span></label>
-                  <input type="text" name="online_birthdate" id="online_birthdate" value="<?php echo $data->online_birthdate; ?>" class="form-control form-control-md" disabled>
-                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <label for="online_idcard" class="form-label fs-base">เลขบัตรประชาชน <span class="text-danger">*</span></label>
-                  <input type="text" name="online_idcard" id="online_idcard" class="form-control form-control-md" value="<?php echo $data->online_idcard; ?>" required>
-                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <label for="online_tel" class="form-label fs-base">เบอร์โทร <span class="text-danger">*</span></label>
-                  <input type="text" name="online_tel" id="online_tel" class="form-control form-control-md" value="<?php echo $data->online_tel; ?>" disabled>
-                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <label for="online_email" class="form-label fs-base">อีเมล์ <span class="text-danger">*</span></label>
-                  <input type="email" name="online_email" id="online_email" class="form-control form-control-md" value="<?php echo $data->online_email; ?>" required>
-                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <label for="online_address" class="form-label fs-base">ที่อยู่ <span class="text-danger">*</span></label>
-                  <input type="text" name="online_address" id="online_address" class="form-control form-control-md" value="<?php echo $data->online_address; ?>" required>
-                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <label for="online_district" class="form-label fs-base">ตำบล <span class="text-danger">*</span></label>
-                  <input type="text" name="online_district" id="online_district" class="form-control form-control-md" value="<?php echo $data->online_district; ?>" required>
-                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <label for="online_amphoe" class="form-label fs-base">อำเภอ <span class="text-danger">*</span></label>
-                  <input type="text" name="online_amphoe" id="online_amphoe" class="form-control form-control-md" value="<?php echo $data->online_amphoe; ?>" required>
-                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <label for="online_province" class="form-label fs-base">จังหวัด <span class="text-danger">*</span></label>
-                  <input type="text" name="online_province" id="online_province" class="form-control form-control-md" value="<?php echo $data->online_province; ?>" required>
-                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
-                </div>
-                <div class="col-sm-6 mb-3">
-                  <label for="online_zipcode" class="form-label fs-base">รหัสไปรษณีย์ <span class="text-danger">*</span></label>
-                  <input type="text" name="online_zipcode" id="online_zipcode" class="form-control form-control-md" value="<?php echo $data->online_zipcode; ?>" required>
-                  <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
-                </div>
-              </div>
-              <div class="form-check mb-3">
-                <input type="checkbox" name="subscribe_id" value="1" id="subscribe_id" <?php echo ($data->subscribe_id == 1 ? 'checked="checked"' : ''); ?> class="form-check-input">
-                <label for="delete-account" class="form-check-label fs-base">ยอมรับการแจ้งเตือนข่าวสารโปรโมชั่นผ่านอีเมล์</label>
-              </div>
-              <div class="d-flex mb-3">
-                <button type="reset" class="btn btn-secondary me-3">ยกเลิก</button>
-                <button type="submit" class="btn btn-primary">บันทึก</button>
-              </div>
+          <div class="row pb-2">
+            <div class="col-sm-6 mb-3">
+              <label for="online_gender" class="form-label fs-base">เพศ <span class="text-danger">*</span></label>
+              <select name="online_gender" id="online_gender" class="form-select form-select-md" required>
+                <option value="">เลือกเพศ</option>
+                <option value="ชาย" <?php echo $data->online_gender == 'ชาย' ? 'selected' : ''; ?>>ชาย</option>
+                <option value="หญิง" <?php echo $data->online_gender == 'หญิง' ? 'selected' : ''; ?>>หญิง</option>
+                <option value="Male" <?php echo $data->online_gender == 'Male' ? 'selected' : ''; ?>>Male</option>
+                <option value="Female" <?php echo $data->online_gender == 'Female' ? 'selected' : ''; ?>>Female</option>
+              </select>
+              <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
             </div>
-            <div class="col-sm-3">
-              <div class="col-sm-12 mb-3 text-center">
-                <label for="online_image" class="form-label fs-base">รูปประจำตัว</label>
-                <div class="d-table position-relative mx-auto mt-2 mt-lg-2 pt-2 mb-4">
-                  <a id="image_a" href="<?php echo $data->online_image != '' ? admin_url() . 'assets/upload/online/' . $data->online_image : admin_url() . 'assets/upload/online/none.png'; ?>" class="fancybox">
-                    <img id="image_show" src="<?php echo $data->online_image != '' ? admin_url() . 'assets/upload/online/' . $data->online_image : admin_url() . 'assets/upload/online/none.png'; ?>" class="d-block rounded-circle" width="150">
-                  </a>
-                </div>
-                <input type="file" accept="image/*" name="online_image" id="upload-image" onchange="uploadImage();" style="display: none">
-                <label for="upload-image" class="btn btn-primary btn-block m-t-10" style="width: 100%;"><i class="fa fa-image pe-1"></i> อัพโหลดรูป</label>
-              </div>
-              <div class="col-sm-12 mb-3 text-center">
-                <?php
-                if ($data->online_password != NULL) {
-                ?>
-                  <button type="button" class="btn btn-danger" style="width: 100%;" onclick="modalEditPassword()"><i class="fa fa-key pe-1"></i> เปลี่ยนรหัสผ่าน</button>
-                <?php
-                }
-                ?>
-              </div>
-              <!-- <div class="col-sm-12 mb-3 text-center">
-                <?php
-                if ($data->facebook_id != '') {
-                ?>
-                  <button ype="button" onclick="unlinkfacebook();" class="btn btn-info" style="width: 100%;"><img class="" src="<?php echo base_url() . "assets/img/social-icon/facebook.png"; ?>" width="20" style="background: #FFFFFF; margin-right: 5px;"> เชื่อม Facebook แล้ว</button>
-                <?php
-                } else {
-                ?>
-                  <button type="button" onclick="linkFacebook();" class="btn btn-info " style="width: 100%;"><img class="" src="<?php echo base_url() . "assets/img/social-icon/facebook.png"; ?>" width="20" style="background: #FFFFFF; margin-right: 5px;"> เชื่อมต่อ Facebook</button>
-                <?php
-                }
-                ?>
-              </div> -->
+            <div class="col-sm-6 mb-3">
+              <label for="online_prefix" class="form-label fs-base">คำนำหน้า <span class="text-danger">*</span></label>
+              <select name="online_prefix" id="online_prefix" class="form-select form-select-md" required>
+                <option value="">เลือกคำนำหน้า</option>
+                <option value="นาย" <?php echo $data->online_prefix == 'นาย' ? 'selected' : ''; ?>>นาย</option>
+                <option value="นางสาว" <?php echo $data->online_prefix == 'นางสาว' ? 'selected' : ''; ?>>นางสาว</option>
+                <option value="นาง" <?php echo $data->online_prefix == 'นาง' ? 'selected' : ''; ?>>นาง</option>
+                <option value="Mr." <?php echo $data->online_prefix == 'Mr.' ? 'selected' : ''; ?>>Mr.</option>
+                <option value="Mrs." <?php echo $data->online_prefix == 'Mrs.' ? 'selected' : ''; ?>>Mrs.</option>
+                <option value="Miss." <?php echo $data->online_prefix == 'Miss.' ? 'selected' : ''; ?>>Miss.</option>
+                <option value="ด.ช." <?php echo $data->online_prefix == 'ด.ช.' ? 'selected' : ''; ?>>ด.ช.</option>
+                <option value="ด.ญ." <?php echo $data->online_prefix == 'ด.ญ.' ? 'selected' : ''; ?>>ด.ญ.</option>
+              </select>
+              <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
             </div>
+            <div class="col-sm-6 mb-3">
+              <label for="online_fname" class="form-label fs-base">ชื่อ <span class="text-danger">*</span></label>
+              <input type="text" name="online_fname" id="online_fname" class="form-control form-control-md" value="<?php echo $data->online_fname; ?>" required>
+              <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <label for="online_lname" class="form-label fs-base">สกุล <span class="text-danger">*</span></label>
+              <input type="text" name="online_lname" id="online_lname" class="form-control form-control-md" value="<?php echo $data->online_lname; ?>" required>
+              <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <label for="online_blood" class="form-label fs-base">กรุ๊ปเลือด <span class="text-danger">*</span></label>
+              <select name="online_blood" id="online_blood" class="form-select form-select-md" required>
+                <option value="">เลือกกรุ๊ปเลือด</option>
+                <option value="A+" <?php echo $data->online_blood == 'A+' ? 'selected' : ''; ?>>A+</option>
+                <option value="A-" <?php echo $data->online_blood == 'A-' ? 'selected' : ''; ?>>A-</option>
+                <option value="AB+" <?php echo $data->online_blood == 'AB+' ? 'selected' : ''; ?>>AB+</option>
+                <option value="AB-" <?php echo $data->online_blood == 'AB-' ? 'selected' : ''; ?>>AB-</option>
+                <option value="B+" <?php echo $data->online_blood == 'B+' ? 'selected' : ''; ?>>B+</option>
+                <option value="B-" <?php echo $data->online_blood == 'B-' ? 'selected' : ''; ?>>B-</option>
+                <option value="O+" <?php echo $data->online_blood == 'O+' ? 'selected' : ''; ?>>O+</option>
+                <option value="O-" <?php echo $data->online_blood == 'O-' ? 'selected' : ''; ?>>O-</option>
+                <option value="ไม่แน่ใจ" <?php echo $data->online_blood == 'ไม่แน่ใจ' ? 'selected' : ''; ?>>ไม่แน่ใจ</option>
+              </select>
+              <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <label for="online_birthdate" class="form-label fs-base">วันเกิด <span class="text-danger">*</span></label>
+              <input type="text" name="online_birthdate" id="online_birthdate" value="<?php echo $data->online_birthdate; ?>" class="form-control form-control-md" disabled>
+              <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <label for="online_idcard" class="form-label fs-base">เลขบัตรประชาชน <span class="text-danger">*</span></label>
+              <input type="text" name="online_idcard" id="online_idcard" class="form-control form-control-md" value="<?php echo $data->online_idcard; ?>" required>
+              <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <label for="online_tel" class="form-label fs-base">เบอร์โทร <span class="text-danger">*</span></label>
+              <input type="text" name="online_tel" id="online_tel" class="form-control form-control-md" value="<?php echo $data->online_tel; ?>" disabled>
+              <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <label for="online_email" class="form-label fs-base">อีเมล์ <span class="text-danger">*</span></label>
+              <input type="email" name="online_email" id="online_email" class="form-control form-control-md" value="<?php echo $data->online_email; ?>" required>
+              <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <label for="online_address" class="form-label fs-base">ที่อยู่ <span class="text-danger">*</span></label>
+              <input type="text" name="online_address" id="online_address" class="form-control form-control-md" value="<?php echo $data->online_address; ?>" required>
+              <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <label for="online_district" class="form-label fs-base">ตำบล <span class="text-danger">*</span></label>
+              <input type="text" name="online_district" id="online_district" class="form-control form-control-md" value="<?php echo $data->online_district; ?>" required>
+              <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <label for="online_amphoe" class="form-label fs-base">อำเภอ <span class="text-danger">*</span></label>
+              <input type="text" name="online_amphoe" id="online_amphoe" class="form-control form-control-md" value="<?php echo $data->online_amphoe; ?>" required>
+              <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <label for="online_province" class="form-label fs-base">จังหวัด <span class="text-danger">*</span></label>
+              <input type="text" name="online_province" id="online_province" class="form-control form-control-md" value="<?php echo $data->online_province; ?>" required>
+              <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <label for="online_zipcode" class="form-label fs-base">รหัสไปรษณีย์ <span class="text-danger">*</span></label>
+              <input type="text" name="online_zipcode" id="online_zipcode" class="form-control form-control-md" value="<?php echo $data->online_zipcode; ?>" required>
+              <div class="invalid-feedback">กรุณากรอกข้อมูล</div>
+            </div>
+          </div>
+          <div class="form-check mb-3">
+            <input type="checkbox" name="subscribe_id" value="1" id="subscribe_id" <?php echo ($data->subscribe_id == 1 ? 'checked="checked"' : ''); ?> class="form-check-input">
+            <label for="delete-account" class="form-check-label fs-base">ยอมรับการแจ้งเตือนข่าวสารโปรโมชั่นผ่านอีเมล์</label>
+          </div>
+          <div class="d-flex mb-3">
+            <?php
+            // if ($data->facebook_id != '') {
+            ?>
+              <!-- <button ype="button" onclick="unlinkfacebook();" class="btn btn-info me-3"><img class="" src="<?php //echo base_url() . "assets/img/social-icon/facebook.png"; ?>" width="20" style="background: #FFFFFF; margin-right: 5px;"> เชื่อม Facebook แล้ว</button> -->
+            <?php
+            // } else {
+            ?>
+              <!-- <button type="button" onclick="linkFacebook();" class="btn btn-info me-3"><img class="" src="<?php //echo base_url() . "assets/img/social-icon/facebook.png"; ?>" width="20" style="background: #FFFFFF; margin-right: 5px;"> เชื่อมต่อ Facebook</button> -->
+            <?php
+            // }
+            if ($data->online_password != NULL) {
+            ?>
+              <button type="button" class="btn btn-info me-3" onclick="modalEditPassword()"><i class="fa fa-key pe-1"></i> เปลี่ยนรหัสผ่าน</button>
+            <?php
+            }
+            ?>
+            <button type="reset" class="btn btn-secondary me-3">ยกเลิก</button>
+            <button type="submit" class="btn btn-primary">บันทึก</button>
           </div>
         </form>
       </div>
@@ -425,9 +477,9 @@
         notification('error', 'Fail', 'อัพโหลดไม่สำเร็จ');
       } else {
         image_link = service_admin_url + 'assets/upload/online/' + res.file_name;
-        $('#image_main').attr("src", image_link);
-        $('#image_a').attr("href", image_link);
-        $('#image_show').attr("src", image_link);
+        $('#image_show').css('background-image', 'url(' + image_link + ')');
+        $('#image_show').hide();
+        $('#image_show').fadeIn(650);
         notification('success', 'Uploaded', 'บันทึกข้อมูลเรียบร้อย');
       }
     });
