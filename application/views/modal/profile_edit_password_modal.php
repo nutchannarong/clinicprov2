@@ -1,6 +1,6 @@
 <form id="form-modal" method="post" action="#" onsubmit="return false" autocomplete="off">
   <div class="modal-header">
-    <h4 class="modal-title"><i class="fa fa-key"></i> เปลี่ยนรหัสผ่าน</h4>
+    <h4 class="modal-title"><i class="fa fa-key me-2"></i> เปลี่ยนรหัสผ่าน</h4>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
   </div>
   <div class="modal-body">

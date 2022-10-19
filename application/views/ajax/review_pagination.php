@@ -60,7 +60,7 @@
         ?>
         <div class="col">
             <div class="text-center mt-5">
-                <h5><i class="fa fa-exclamation-triangle"></i> ไม่พบข้อมูล</h5>
+                <h5><i class="fa fa-exclamation-triangle me-2"></i> ไม่พบข้อมูล</h5>
             </div>
         </div>
         <?php

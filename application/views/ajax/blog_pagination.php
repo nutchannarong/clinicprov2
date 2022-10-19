@@ -59,7 +59,7 @@ if ($data->num_rows() > 0) {
 } else {
     ?>
     <div class="text-center mt-5">
-        <h5 class="text-center"><i class="fa fa-exclamation-triangle"></i> ไม่พบข้อมูล</h5>
+        <h5 class="text-center"><i class="fa fa-exclamation-triangle me-2"></i> ไม่พบข้อมูล</h5>
     </div>
     <?php
 }

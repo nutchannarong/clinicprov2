@@ -39,7 +39,7 @@
                                 </div>
                                 <?php if(($row->productreview_reply != '' || $row->productreview_reply != null) && $row->user_id != null){?>
                                 <div class="review__body ml-2 mt-3">
-                                    <div class=""><i class="fa fa-reply-all fa-flip-horizontal fa-flip-vertical text-secondary"></i> <img src="<?php echo admin_url() . 'assets/upload/user/' .$row->user_image; ?>" width="35"></div>
+                                    <div class=""><i class="fa fa-reply-all fa-flip-horizontal fa-flip-vertical text-secondary me-2"></i> <img src="<?php echo admin_url() . 'assets/upload/user/' .$row->user_image; ?>" width="35"></div>
                                     <div class="review__meta ml-2">
                                         <div class="review__author"><?php echo $row->user_fullname; ?></div>
                                         <div class="review__date text-dark"> <?php echo $this->misc->date2thai($row->productreview_reply_date, '%d %m %y', 1)?></div>
@@ -57,7 +57,7 @@
                 } else {
                     ?>
                     <div class="text-center mt-5">
-                        <h5 class="text-center" ><i class="fa fa-exclamation-triangle"></i> ไม่พบข้อมูล</h5>
+                        <h5 class="text-center" ><i class="fa fa-exclamation-triangle me-2"></i> ไม่พบข้อมูล</h5>
                     </div>
                     <?php
                 }

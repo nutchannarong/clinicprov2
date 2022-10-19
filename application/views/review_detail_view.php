@@ -99,7 +99,7 @@
                                                                 <div class="product-card__info">
                                                                     <div class="product-card__meta">
                                                                         <a class="text-muted" href="javascript:void(0)"><?php echo $row_product_new->shop_nature_name; ?></a>
-                                                                        <span style="float: right"><i class="fa fa-eye"></i> <?php echo number_format($row_product_new->product_view); ?></span>
+                                                                        <span style="float: right"><i class="fa fa-eye me-2"></i> <?php echo number_format($row_product_new->product_view); ?></span>
                                                                     </div>
                                                                     <div class="product-card__name mt-2">
                                                                         <a class="mt-2 text-primary" target="blank_" href="<?php echo base_url().'promotion/'.$row_product_new->product_slug; ?>" style="font-size: 16px;"> <?php echo $row_product_new->product_name;?></a>
@@ -130,7 +130,7 @@
                                                                         ?>
                                                                     </div>
                                                                     <a target="blank_" href="<?php echo base_url().'promotion/'.$row_product_new->product_slug; ?>" class="product-card__addtocart-icon" type="button" aria-label="Add to cart">
-                                                                        <i class="fa fa-eye"></i>
+                                                                        <i class="fa fa-eye me-2"></i>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -141,7 +141,7 @@
                                         }else {
                                             ?>
                                             <div class="col">
-                                                <h5 class="text-center mt-5"><i class="fa fa-exclamation-triangle"></i> ไม่พบข้อมูล</h5>
+                                                <h5 class="text-center mt-5"><i class="fa fa-exclamation-triangle me-2"></i> ไม่พบข้อมูล</h5>
                                             </div>
                                             <?php
                                         }?>

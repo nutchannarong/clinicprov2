@@ -16,7 +16,7 @@ if ($data->num_rows() > 0) {
                            </div>
                        <?php } ?>
                        <a target="blank_" href="<?php echo base_url() . 'promotion/' . $row->product_slug; ?>">
-                           <span class="pro-view-shop"><i class="fa fa-eye"></i> <?php echo number_format($row->product_view);?></span>
+                           <span class="pro-view-shop"><i class="fa fa-eye me-2"></i> <?php echo number_format($row->product_view);?></span>
                            <img srcset="<?php echo admin_url() . 'images?src=' . admin_url() . 'assets/upload/product/' . $row->product_image. '&w=190&h=150'; ?>" width="100%">
                        </a>
                    </div>
@@ -50,7 +50,7 @@ if ($data->num_rows() > 0) {
                            <?php if($row->product_group_id == 2){ ?>
                                <div class="pro-birthday">
                                    <div style="background: #0069FD; border-radius: 50%;">
-                                       <i class="fa fa-birthday-cake p-2 text-white"></i>
+                                       <i class="fa fa-birthday-cake p-2 text-white me-2"></i>
                                    </div>
                                </div>
                            <?php }?>
@@ -65,7 +65,7 @@ if ($data->num_rows() > 0) {
 } else {
     ?>
     <div class="col">
-        <h5 class="text-center mt-5"><i class="fa fa-exclamation-triangle"></i> ไม่พบข้อมูล</h5>
+        <h5 class="text-center mt-5"><i class="fa fa-exclamation-triangle me-2"></i> ไม่พบข้อมูล</h5>
     </div>
     <?php
 }

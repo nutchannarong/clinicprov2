@@ -7,7 +7,7 @@
                 <div class="col-md-5 d-flex">
                     <div class="card flex-grow-1 mb-md-0 mr-0 mr-lg-3 ml-0 ml-lg-4">
                         <div class="card-body card-body--padding--2">
-                            <h3 class="card-title text-center"><i class="fas fa-user-edit"></i> สมัครสมาชิก</h3>
+                            <h3 class="card-title text-center"><i class="fas fa-user-edit me-2"></i> สมัครสมาชิก</h3>
                             <form class="account-menu__form" id="form-register" method="post" action="<?php echo base_url() . 'register/doregister'; ?>" autocomplete="off">
                                 <div class="form-group">
                                     <label for="idcard">รหัสประจำตัวประชาชน <span class="text-danger">*</span></label>
@@ -124,7 +124,7 @@
                                 </div>
                                 <hr>
                                 <div class="account-menu__form-link">
-                                    <a href="<?php echo base_url() . 'authen'; ?>"><i class="fas fa-sign-in-alt"></i> กลับหน้าเข้าสู่ระบบ</a>
+                                    <a href="<?php echo base_url() . 'authen'; ?>"><i class="fas fa-sign-in-alt me-2"></i> กลับหน้าเข้าสู่ระบบ</a>
                                 </div>
 
                             </form>

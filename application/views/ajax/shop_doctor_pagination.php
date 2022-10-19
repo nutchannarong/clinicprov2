@@ -25,7 +25,7 @@
                                     foreach ($get_specialized_sub->result() as $row_specialized_sub) {
                                         ?>
                                                                 <!--                                        <span class="text-primary" style="font-size: 12px;">
-                                                                                                    <i class="fas fa-circle" style="font-size: 8px;"></i>
+                                                                                                    <i class="fas fa-circle" style="font-size: 8px; me-2"></i>
                                         <?php //echo $row_specialized_sub->specialized_sub_name; ?>
                                                                                                 </span>-->
                                         <?php
@@ -86,7 +86,7 @@
     } else {
         ?>
         <div class="col">
-            <h5 class="text-center mt-5"><i class="fa fa-exclamation-triangle"></i> ไม่พบข้อมูล</h5>
+            <h5 class="text-center mt-5"><i class="fa fa-exclamation-triangle me-2"></i> ไม่พบข้อมูล</h5>
         </div>
         <?php
     }

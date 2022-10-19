@@ -7,7 +7,7 @@
                 <div class="col-md-5 mt-2 d-flex">
                     <div class="card flex-grow-1 mb-md-0 mr-0 mr-lg-3 ml-0 ml-lg-4">
                         <div class="card-body card-body--padding--2">
-                            <h3 class="card-title text-center"><i class="fas fa-key"></i> สร้างรหัสผ่าน</h3>          
+                            <h3 class="card-title text-center"><i class="fas fa-key me-2"></i> สร้างรหัสผ่าน</h3>          
                             <form class="account-menu__form" id="form-otp" method="post" action="<?php echo base_url() . 'authen/docreatepassword'; ?>" autocomplete="off">
                                 <input type="hidden" name="tel" value="<?php echo $tel; ?>">
                                 <div class="text-center" id="flash_message_form_otp">

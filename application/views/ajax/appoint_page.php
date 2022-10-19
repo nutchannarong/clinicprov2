@@ -23,15 +23,15 @@
                     <td><div style="min-width: 100px"><?php echo $this->misc->date2thai($row->chatbot_day, '%d %m %y', 1).' เวลา '.$row->chatbot_time; ?></div></td>
                     <td class="text-center">
                         <?php if ($row->chatbot_status_id == 1) { ?>
-                            <span class="badge badge-warning text-white"><i class="fa fa-warning"></i> รอดำเนินการ</span>
+                            <span class="badge badge-warning text-white"><i class="fa fa-warning me-2"></i> รอดำเนินการ</span>
                         <?php } elseif ($row->chatbot_status_id == 2) { ?>
-                            <span class="badge badge-success text-white"><i class="fa fa-clock-o"></i> เสร็จสิ้น</span>
+                            <span class="badge badge-success text-white"><i class="fa fa-clock-o me-2"></i> เสร็จสิ้น</span>
                         <?php } else { ?>
-                            <span class="badge badge-danger text-white"><i class="fa fa-close"></i> ยกเลิก</span>
+                            <span class="badge badge-danger text-white"><i class="fa fa-close me-2"></i> ยกเลิก</span>
                         <?php } ?>
                     </td>
                     <td class="text-right">
-                        <button class="btn btn-danger btn-sm" onclick="modalCancel('<?php echo $row->chatbot_id; ?>')"> <i class="fa fa-times-circle"></i> ยกเลิก</button>
+                        <button class="btn btn-danger btn-sm" onclick="modalCancel('<?php echo $row->chatbot_id; ?>')"> <i class="fa fa-times-circle me-2"></i> ยกเลิก</button>
                     </td>
                 </tr>
                 <?php
@@ -40,7 +40,7 @@
         } else {
             ?>
             <tr>
-                <td class="text-center" colspan="13"><i class="fa fa-info-circle text-danger"></i>&nbsp;<span class="text-danger">ไม่พบข้อมูล</span></td>
+                <td class="text-center" colspan="13"><i class="fa fa-info-circle text-danger me-2"></i>&nbsp;<span class="text-danger">ไม่พบข้อมูล</span></td>
             </tr>
             <?php
         }

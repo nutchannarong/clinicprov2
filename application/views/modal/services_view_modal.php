@@ -1,6 +1,6 @@
 <div class="modal-header">
-    <h6 class="modal-title"><i class="fa fa-edit"></i> ตรวจสอบบริการ/คอร์ส</h6>
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h6 class="modal-title"><i class="fa fa-edit me-2"></i> ตรวจสอบบริการ/คอร์ส</h6>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></button>
 </div>
 <div class="modal-body">
     <div class="table-responsive">
@@ -178,7 +178,7 @@
                 } if($i == 1) {
                     ?>
                     <tr>
-                        <td class="text-center" colspan="13"><i class="fa fa-info-circle text-danger"></i>&nbsp;<span class="text-danger">ไม่พบข้อมูล</span></td>
+                        <td class="text-center" colspan="13"><i class="fa fa-info-circle text-danger me-2"></i>&nbsp;<span class="text-danger">ไม่พบข้อมูล</span></td>
                     </tr>
                     <?php
                 }
@@ -188,5 +188,5 @@
     </div>
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times-circle"></i> ปิด</button>
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa fa-times-circle me-2"></i> ปิด</button>
 </div>

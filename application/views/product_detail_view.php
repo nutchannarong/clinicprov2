@@ -52,7 +52,7 @@
                                     <div class="owl-carousel">
                                         <?php foreach ($pro_image as $row_image) { ?>
                                             <a href="<?php echo $row_image; ?>" class="fancybox">
-                                                <span class="pro-view"><i class="fa fa-eye"></i> <?php echo number_format($row_product['product_view']); ?></span>
+                                                <span class="pro-view"><i class="fa fa-eye me-2"></i> <?php echo number_format($row_product['product_view']); ?></span>
                                                 <img src="<?php echo $row_image; ?>">
                                             </a>
                                         <?php } ?>
@@ -208,7 +208,7 @@
                                                                         </div>
                                                                     <?php } ?>
                                                                     <a target="blank_" href="<?php echo base_url() . 'promotion/' . $row_product_by_shop->product_slug; ?>">
-                                                                        <span class="pro-view-shop"><i class="fa fa-eye"></i> <?php echo number_format($row_product_by_shop->product_view); ?></span>
+                                                                        <span class="pro-view-shop"><i class="fa fa-eye me-2"></i> <?php echo number_format($row_product_by_shop->product_view); ?></span>
                                                                         <img srcset="<?php echo admin_url() . 'images?src=' . admin_url() . 'assets/upload/product/' . $row_product_by_shop->product_image . '&w=190&h=170'; ?>"  alt="" width="100%">
                                                                     </a>
                                                                 </div>
@@ -244,7 +244,7 @@
                                                                         <?php if ($row_product_by_shop->product_group_id == 2) { ?>
                                                                             <div class="pro-birthday">
                                                                                 <div style="background: #0069FD; border-radius: 50%;">
-                                                                                    <i class="fa fa-birthday-cake p-2 text-white"></i>
+                                                                                    <i class="fa fa-birthday-cake p-2 text-white me-2"></i>
                                                                                 </div>
                                                                             </div>
                                                                         <?php } ?>
@@ -258,7 +258,7 @@
                                             } else {
                                                 ?>
                                                 <div class="col">
-                                                    <h5 class="text-center"><i class="fa fa-exclamation-triangle"></i> ไม่พบข้อมูล</h5>
+                                                    <h5 class="text-center"><i class="fa fa-exclamation-triangle me-2"></i> ไม่พบข้อมูล</h5>
                                                 </div>
                                             <?php }
                                             ?>
@@ -276,7 +276,7 @@
                                             <?php } else {
                                                 ?>
                                                 <div class="mt-4 text-center">
-                                                    <h5><i class="fa fa-exclamation-triangle"></i> ไม่พบวิดีโอ</h5>
+                                                    <h5><i class="fa fa-exclamation-triangle me-2"></i> ไม่พบวิดีโอ</h5>
                                                 </div>
                                                 <?php
                                             }
@@ -299,7 +299,7 @@
                                                             <label>รูปภาพ</label>
                                                             <img id="preview_image" src="<?php echo admin_url() . 'assets/upload/online/none.png'; ?>" width="100%">
                                                             <input type="file" id="review_image" name="review_image" accept="image/*" onchange="previewImage(event)" style="display: none">
-                                                            <label for="review_image" class="btn btn-info btn-sm btn-block m-t-10"><i class="fa fa-image"></i> เลือกรูปภาพ</label>
+                                                            <label for="review_image" class="btn btn-info btn-sm btn-block m-t-10"><i class="fa fa-image me-2"></i> เลือกรูปภาพ</label>
                                                         </div>
                                                         <div class="col-md-9">
                                                             <label>ให้คะเเนน :</label>
@@ -313,8 +313,8 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12 mt-2 text-right">
-                                                            <button type="button" id="btn-form-review" class="btn btn-primary"><i id="fa-form-review" class="fas fa-check"></i> ตกลง</button>
-                                                            <button type="reset" class="btn btn-secondary"><i class="fa fa-times"></i> ยกเลิก</button>
+                                                            <button type="button" id="btn-form-review" class="btn btn-primary"><i id="fa-form-review" class="fas fa-check me-2"></i> ตกลง</button>
+                                                            <button type="reset" class="btn btn-secondary"><i class="fa fa-times me-2"></i> ยกเลิก</button>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -393,15 +393,15 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title"><i class="fa fa-exclamation-triangle"></i> ต้องการเริ่มตะกร้าใหม่ ?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h5 class="modal-title"><i class="fa fa-exclamation-triangle me-2"></i> ต้องการเริ่มตะกร้าใหม่ ?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></button>
             </div>
             <div class="modal-body text-center">
                 <span class="text-secondary">รายการสินค้าร้านเดิมจะถูกลบออก หากคุณสั่งสินค้าจากร้านใหม่<br>ต้องการสั่งซื้อต่อหรือไม่</span>
             </div>
             <div class="modal-footer">
-                <a href="" id="btn-confirm-cart" class="btn btn-primary"><i class="fa fa-shopping-basket"></i> สั่งซื้อ</a>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fa fa-times"></i> ยกเลิก</button>
+                <a href="" id="btn-confirm-cart" class="btn btn-primary"><i class="fa fa-shopping-basket me-2"></i> สั่งซื้อ</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> <i class="fa fa-times me-2"></i> ยกเลิก</button>
             </div>
         </div>
     </div>
@@ -420,7 +420,7 @@
     })
 
     function ajax_pagination() {
-        $('#result-pagination').html('<div style="margin-left: 350px; padding:80px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></div>');
+        $('#result-pagination').html('<div style="margin-left: 350px; padding:80px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw me-2"></i></div>');
         $.ajax({
             url: service_base_url + 'productdetail/ajax_pagination',
             type: 'POST',

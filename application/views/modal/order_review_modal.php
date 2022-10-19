@@ -30,8 +30,8 @@ if ($data->num_rows() > 0) {
         </div>
     </div>
     <div class="modal-footer">
-        <button type="button" id="btn-form-modal" class="btn btn-primary"><i id="fa-form-modal" class="fas fa-check"></i> ตกลง</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times-circle"></i> ยกเลิก</button>
+        <button type="button" id="btn-form-modal" class="btn btn-primary"><i id="fa-form-modal" class="fas fa-check me-2"></i> ตกลง</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa fa-times-circle me-2"></i> ยกเลิก</button>
     </div>
 </form>
     <script>

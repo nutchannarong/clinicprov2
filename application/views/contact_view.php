@@ -18,7 +18,7 @@
                         <div class="col-md-2 col-2"></div>
                         <div class="col-lg-8 col-md-8 col-12">
                             <div class="d-flex no-block m-b-10 m-t-20">
-                                <div class="display-7 m-r-20 align-self-top"><i class="icon-Location-2"></i></div>
+                                <div class="display-7 m-r-20 align-self-top"><i class="icon-Location-2 me-2"></i></div>
                                 <div class="info">
                                     <h5 class="font-medium text-dark db m-t-5">APSTH (หจก.เอพีเอส ทีเอช)</h5>
                                     <p class="font-medium text-dark db m-t-5">Tel. (+66) 98-1816769</p>

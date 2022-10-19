@@ -64,7 +64,7 @@
                     <div class="input-group">
                         <input id="searchtextshop" style="border: 1px solid #2063EF" type="text" placeholder="ค้นหาชื่อคลินิก" class="form-control">
                         <div class="input-group-append">
-                            <button type="button" class="btn btn-sm btn-info" onclick="ajax_pagination()" style="background-color: #2063EF; border-color: #2063EF;"><i class="fa fa-search"></i></button>
+                            <button type="button" class="btn btn-sm btn-info" onclick="ajax_pagination()" style="background-color: #2063EF; border-color: #2063EF;"><i class="fa fa-search me-2"></i></button>
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title text-center">เลือกประเภทคลินิก</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -257,7 +257,7 @@
 
 
                     function ajax_pagination() {
-                        $('#result-pagination').html('<h6 class="text-center mt-5"> <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></h6>');
+                        $('#result-pagination').html('<h6 class="text-center mt-5"> <i class="fa fa-spinner fa-spin fa-3x fa-fw me-2"></i></h6>');
                         var nature_id = new Array();
                         $("input:checkbox[name=modal_pro_nature_id]:checked").each(function () {
                             nature_id.push($(this).val());

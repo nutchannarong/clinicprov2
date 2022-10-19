@@ -80,12 +80,12 @@
                     <td><div style="min-width: 100px"><a target="_blank" href="<?php echo base_url().'shop/'.$row->shop_id; ?>"><?php echo $row->shop_name; ?></a></div></td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic example" style="min-width: 120px">
-                            <button type="button" class="btn btn-xs btn-danger" onclick="modalUpload('<?php echo $row->opd_id; ?>', '1')"><i class="fa fa-image"></i> ก่อน</button>
-                            <button type="button" class="btn btn-xs btn-dark" onclick="modalUpload('<?php echo $row->opd_id; ?>', '2')"><i class="fa fa-image"></i> หลัง</button>
+                            <button type="button" class="btn btn-xs btn-danger" onclick="modalUpload('<?php echo $row->opd_id; ?>', '1')"><i class="fa fa-image me-2"></i> ก่อน</button>
+                            <button type="button" class="btn btn-xs btn-dark" onclick="modalUpload('<?php echo $row->opd_id; ?>', '2')"><i class="fa fa-image me-2"></i> หลัง</button>
                         </div>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-xs btn-primary" onclick="modalOpdView('<?php echo $row->opd_id; ?>')"><i class="fa fa-list"></i> รายละเอียด</button>
+                        <button type="button" class="btn btn-xs btn-primary" onclick="modalOpdView('<?php echo $row->opd_id; ?>')"><i class="fa fa-list me-2"></i> รายละเอียด</button>
                     </td>
                 </tr>
                 <?php
@@ -94,7 +94,7 @@
         } else {
             ?>
             <tr>
-                <td class="text-center" colspan="13"><i class="fa fa-info-circle text-danger"></i>&nbsp;<span class="text-danger">ไม่พบข้อมูล</span></td>
+                <td class="text-center" colspan="13"><i class="fa fa-info-circle text-danger me-2"></i>&nbsp;<span class="text-danger">ไม่พบข้อมูล</span></td>
             </tr>
             <?php
         }

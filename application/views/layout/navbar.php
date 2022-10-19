@@ -56,7 +56,7 @@
       <div class="pe-lg-1 ms-auto me-4 d-none d-lg-inline-flex">
         <div class="input-group">
           <input type="text" class="form-control form-control-sm rounded-start ps-5" placeholder="ค้นหาชื่อร้านหรือ บริการ">
-          <i class="bx bx-search fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+          <i class="bx bx-search fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5 me-2"></i>
           <button type="submit" class="btn btn-sm btn-primary">Search</button>
         </div>
       </div>
@@ -137,11 +137,11 @@
           </div>
         </div>
         <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="bx bx-user-circle fs-5 lh-1 me-1"></i>
+          <i class="bx bx-user-circle fs-5 lh-1 me-1 me-2"></i>
         </button>
       <?php } else { ?>
         <a href="<?php echo base_url() . 'authen'; ?>" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" rel="noopener">
-          <i class="bx bx-user-circle fs-5 lh-1 me-1"></i>
+          <i class="bx bx-user-circle fs-5 lh-1 me-1 me-2"></i>
           &nbsp;เข้าสู่ระบบ
         </a>
       <?php } ?>

@@ -90,7 +90,7 @@
     })
 
     function ajax_pagination() {
-        $('#result-pagination').html('<div style="margin-left: 350px; padding:80px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></div>');
+        $('#result-pagination').html('<div style="margin-left: 350px; padding:80px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw me-2"></i></div>');
         $.ajax({
             url: service_base_url + 'review/ajax_pagination',
             type: 'POST',

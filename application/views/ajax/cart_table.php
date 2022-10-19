@@ -66,8 +66,8 @@
                     </td>
                     <td class="text-right">
                         <div class="btn-group" role="group" aria-label="Basic example" style="min-width: 120px">
-                            <button type="button" id="btn_cart_<?php echo $row->orderdetail_temp_id_pri; ?>" class="btn btn-xs btn-primary" onclick="addToCart('<?php echo $row->product_id; ?>', '<?php echo $row->orderdetail_temp_id_pri; ?>')"><i class="fa fa-shopping-basket"></i> สั่งซื้อ</button>
-                            <button type="button" class="btn btn-xs btn-danger" onclick="modalDelete('<?php echo $row->orderdetail_temp_id_pri; ?>')"><i class="fa fa-trash"></i> ลบ</button>
+                            <button type="button" id="btn_cart_<?php echo $row->orderdetail_temp_id_pri; ?>" class="btn btn-xs btn-primary" onclick="addToCart('<?php echo $row->product_id; ?>', '<?php echo $row->orderdetail_temp_id_pri; ?>')"><i class="fa fa-shopping-basket me-2"></i> สั่งซื้อ</button>
+                            <button type="button" class="btn btn-xs btn-danger" onclick="modalDelete('<?php echo $row->orderdetail_temp_id_pri; ?>')"><i class="fa fa-trash me-2"></i> ลบ</button>
                         </div>
                     </td>
                 </tr>
@@ -78,7 +78,7 @@
         } else {
             ?>
             <tr>
-                <td class="text-center" colspan="13"><i class="fa fa-info-circle text-danger"></i>&nbsp;<span class="text-danger">ไม่พบข้อมูล</span></td>
+                <td class="text-center" colspan="13"><i class="fa fa-info-circle text-danger me-2"></i>&nbsp;<span class="text-danger">ไม่พบข้อมูล</span></td>
             </tr>
             <?php
         }

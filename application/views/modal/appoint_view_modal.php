@@ -1,14 +1,6 @@
 <div class="modal-header">
-    <h6 class="modal-title"><i class="fa fa-eye"></i>  รายละเอียดการนัดหมาย
-        <?php if ($data->appoint_status_id == 1) { ?>
-            <span class="badge badge-warning text-white"><i class="fa fa-warning"></i> รอดำเนินการ</span>
-        <?php } elseif ($data->appoint_status_id == 2) { ?>
-            <span class="badge badge-success text-white"><i class="fa fa-clock-o"></i> เสร็จสิ้น</span>
-        <?php } else { ?>
-            <span class="badge badge-danger text-white"><i class="fa fa-close"></i> ยกเลิก</span>
-        <?php } ?>
-    </h6>
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h6 class="modal-title"><i class="fa fa-eye me-2"></i>  รายละเอียดการนัดหมาย</h6>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></button>
 </div>
 <div class="modal-body">
     <div class="row">
@@ -59,5 +51,5 @@
     </div>
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times-circle"></i> ปิด</button>
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa fa-times-circle me-2"></i> ปิด</button>
 </div>

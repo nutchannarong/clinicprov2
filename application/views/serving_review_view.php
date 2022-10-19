@@ -18,7 +18,7 @@
                                             <div class="input-group">
                                                 <input type="text" id="searchtext" class="form-control " placeholder="กรอกคำค้นหา...">
                                                 <div class="input-group-append">
-                                                    <button class="btn btn-primary" onclick="ajaxPagination()"><i class="fa fa-search"></i> ค้นหา</button>
+                                                    <button class="btn btn-primary" onclick="ajaxPagination()"><i class="fa fa-search me-2"></i> ค้นหา</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -64,7 +64,7 @@
     })
 
     function ajaxPagination() {
-        $('#result-pagination').html('<div style="margin-left: 350px; padding:80px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></div>')
+        $('#result-pagination').html('<div style="margin-left: 350px; padding:80px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw me-2"></i></div>')
         $.ajax({
             url: service_base_url + 'servingreview/ajaxpagination',
             type: 'POST',

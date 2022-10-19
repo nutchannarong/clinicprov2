@@ -7,7 +7,7 @@
                 <div class="col-md-5 mt-2 d-flex">
                     <div class="card flex-grow-1 mb-md-0 mr-0 mr-lg-3 ml-0 ml-lg-4">
                         <div class="card-body card-body--padding--2">
-                            <h3 class="card-title text-center"><i class="fas fa-key"></i> ลืมรหัสผ่าน</h3>
+                            <h3 class="card-title text-center"><i class="fas fa-key me-2"></i> ลืมรหัสผ่าน</h3>
                             <form class="account-menu__form" style="padding-bottom: 0px;" id="form-login" method="post" action="<?php echo base_url() . 'forget/doforget'; ?>" autocomplete="off">
                                 <div class="text-center" id="flash_message">
                                     <?php
@@ -32,7 +32,7 @@
                             <div class="account-menu__form" style="padding-top: 0px;">
                                 <hr>
                                 <div class="account-menu__form-link">
-                                    <a href="<?php echo base_url() . 'authen'; ?>"><i class="fa fa-angle-left"></i> กลับหน้าเข้าสู่ระบบ</a>
+                                    <a href="<?php echo base_url() . 'authen'; ?>"><i class="fa fa-angle-left me-2"></i> กลับหน้าเข้าสู่ระบบ</a>
                                 </div>
                             </div>
                         </div>

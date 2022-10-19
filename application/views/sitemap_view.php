@@ -13,7 +13,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="mtb-10">
-                                <h5><i class="fa fa-sitemap"></i> หน้าทั้งหมด</h5>
+                                <h5><i class="fa fa-sitemap me-2"></i> หน้าทั้งหมด</h5>
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -42,7 +42,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="mtb-10">
-                                <h5><i class="fa fa-sitemap"></i> โปรโมชั่น</h5>
+                                <h5><i class="fa fa-sitemap me-2"></i> โปรโมชั่น</h5>
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -65,7 +65,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="mtb-10">
-                                <h5><i class="fa fa-sitemap"></i> คลินิก</h5>
+                                <h5><i class="fa fa-sitemap me-2"></i> คลินิก</h5>
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -88,7 +88,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="mtb-10">
-                                <h5><i class="fa fa-sitemap"></i> บทความ</h5>
+                                <h5><i class="fa fa-sitemap me-2"></i> บทความ</h5>
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -111,7 +111,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="mtb-10">
-                                <h5><i class="fa fa-sitemap"></i> ประเภทบริการ</h5>
+                                <h5><i class="fa fa-sitemap me-2"></i> ประเภทบริการ</h5>
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -133,7 +133,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="mtb-10">
-                                <h5><i class="fa fa-sitemap"></i> หมวดหมู่บริการ</h5>
+                                <h5><i class="fa fa-sitemap me-2"></i> หมวดหมู่บริการ</h5>
                             </div>
                         </div>
                         <div class="col-md-12">

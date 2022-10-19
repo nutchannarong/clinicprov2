@@ -1,7 +1,7 @@
 <form id="form-modal" method="post" onsubmit="submit_add();" action="<?php echo base_url('shopdetail/add_appoint'); ?>" enctype="multipart/form-data" autocomplete="off">
     <div class="modal-header">
-        <h6 class="modal-title"> <i class="fa fa-plus-circle"></i> เพิ่มการนัดหมาย</h6>
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h6 class="modal-title"> <i class="fa fa-plus-circle me-2"></i> เพิ่มการนัดหมาย</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></button>
     </div>
     <div class="modal-body">
         <div class="row">
@@ -55,9 +55,9 @@
     </div>
     <div class="modal-footer">
         <button type="submit" id="btn-add-submit" class="btn btn-primary">
-            <i class="fa fa-save"></i> ตกลง
+            <i class="fa fa-save me-2"></i> ตกลง
         </button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fa fa-times-circle"></i> ปิด</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> <i class="fa fa-times-circle me-2"></i> ปิด</button>
     </div>
 </form>
 <script>

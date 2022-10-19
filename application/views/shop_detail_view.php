@@ -213,7 +213,7 @@
     })
 
     function ajax_pagination() {
-        $('#result-pagination').html('<div style="margin-left: 350px; padding:80px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></div>');
+        $('#result-pagination').html('<div style="margin-left: 350px; padding:80px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw me-2"></i></div>');
         $.ajax({
             url: service_base_url + 'shopdetail/ajax_pagination',
             type: 'POST',
@@ -228,7 +228,7 @@
     }
 
     function ajax_doctor_pagination() {
-        $('#result-doctor-pagination').html('<div style="margin-left: 350px; padding:80px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></div>');
+        $('#result-doctor-pagination').html('<div style="margin-left: 350px; padding:80px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw me-2"></i></div>');
         $.ajax({
             url: service_base_url + 'shopdetail/ajax_doctor_pagination',
             type: 'POST',
@@ -242,7 +242,7 @@
     }
 
     function ajax_shop_sub_pagination() {
-        $('#result-shop-sub-pagination').html('<div style="margin-left: 350px; padding:80px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></div>');
+        $('#result-shop-sub-pagination').html('<div style="margin-left: 350px; padding:80px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw me-2"></i></div>');
         $.ajax({
             url: service_base_url + 'shopdetail/ajax_shop_sub_pagination',
             type: 'POST',

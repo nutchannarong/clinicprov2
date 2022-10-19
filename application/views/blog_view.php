@@ -68,7 +68,7 @@
                                                                 <div class="product-card__info">
                                                                     <div class="product-card__meta">
                                                                         <a class="text-muted" href="javascript:void(0)"><?php echo $row_product_new->shop_nature_name; ?></a>
-                                                                        <span style="float: right"><i class="fa fa-eye"></i> <?php echo number_format($row_product_new->product_view); ?></span>
+                                                                        <span style="float: right"><i class="fa fa-eye me-2"></i> <?php echo number_format($row_product_new->product_view); ?></span>
                                                                     </div>
                                                                     <div class="product-card__name mt-2">
                                                                         <a class="mt-2 text-primary" target="blank_" href="<?php echo base_url().'promotion/'.$row_product_new->product_slug; ?>" style="font-size: 16px;"> <?php echo $row_product_new->product_name;?></a>
@@ -100,7 +100,7 @@
                                                                     </div>
                                                                     <?php if($row_product_new->product_group_id == 2){ ?>
                                                                         <a target="blank_" href="<?php echo base_url().'promotion/'.$row_product_new->product_slug; ?>" class="product-card__addtocart-icon" type="button" aria-label="Add to cart">
-                                                                            <i class="fa fa-birthday-cake "></i>
+                                                                            <i class="fa fa-birthday-cake  me-2"></i>
                                                                         </a>
                                                                     <?php }?>
                                                                 </div>
@@ -112,7 +112,7 @@
                                         }else {
                                             ?>
                                             <div class="col">
-                                                <h5 class="text-center mt-5"><i class="fa fa-exclamation-triangle"></i> ไม่พบข้อมูล</h5>
+                                                <h5 class="text-center mt-5"><i class="fa fa-exclamation-triangle me-2"></i> ไม่พบข้อมูล</h5>
                                             </div>
                                             <?php
                                         }?>
@@ -132,7 +132,7 @@
     })
 
     function ajax_pagination() {
-        $('#result-pagination').html('<div style="margin-left: 350px; padding:80px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></div>');
+        $('#result-pagination').html('<div style="margin-left: 350px; padding:80px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw me-2"></i></div>');
         $.ajax({
             url: service_base_url + 'blog/ajax_pagination',
             type: 'POST',

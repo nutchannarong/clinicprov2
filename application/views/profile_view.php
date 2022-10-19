@@ -23,7 +23,7 @@
                           <img id="image_show" src="<?php echo $data->online_image != '' ? admin_url() . 'assets/upload/online/' . $data->online_image : admin_url() . 'assets/upload/online/none.png'; ?>" width="100%">
                         </a>
                         <input type="file" accept="image/*" name="online_image" id="upload-image" onchange="uploadImage();" style="display: none">
-                        <label for="upload-image" class="btn btn-info btn-sm btn-block m-t-10"><i class="fa fa-image"></i> อัพโหลดรูป</label>
+                        <label for="upload-image" class="btn btn-info btn-sm btn-block m-t-10"><i class="fa fa-image me-2"></i> อัพโหลดรูป</label>
                       </div>
                       <div class="col-md-12 col-lg-10 col-xl-10">
                         <div class="row">
@@ -142,14 +142,14 @@
                         <?php
                         if ($data->online_password != NULL) {
                         ?>
-                          <button type="button" class="btn btn-info btn-sm mt-2" onclick="modalEditPassword()"><i class="fa fa-key"></i> เปลี่ยนรหัสผ่าน</button>
+                          <button type="button" class="btn btn-info btn-sm mt-2" onclick="modalEditPassword()"><i class="fa fa-key me-2"></i> เปลี่ยนรหัสผ่าน</button>
                         <?php
                         }
                         ?>
                       </div>
                       <div class="col-xl text-right mt-2">
-                        <button type="submit" class="btn btn-primary mt-2"><i class="fa fa-save"></i> บันทึก</button>
-                        <button type="reset" class="btn btn-danger mt-2"> <i class="fa fa-times-circle"></i> ยกเลิก</button>
+                        <button type="submit" class="btn btn-primary mt-2"><i class="fa fa-save me-2"></i> บันทึก</button>
+                        <button type="reset" class="btn btn-danger mt-2"> <i class="fa fa-times-circle me-2"></i> ยกเลิก</button>
                       </div>
                     </div>
                   </form>
@@ -181,72 +181,6 @@
 </div> -->
 
 <!-- Page content -->
-<style>
-  .avatar-upload {
-    position: relative;
-    max-width: 205px;
-  }
-
-  .avatar-upload .avatar-edit {
-    position: absolute;
-    right: 12px;
-    z-index: 1;
-    top: 10px;
-  }
-
-  .avatar-upload .avatar-edit input {
-    display: none;
-  }
-
-  .avatar-upload .avatar-edit input+label {
-    display: inline-block;
-    width: 34px;
-    height: 34px;
-    margin-bottom: 0;
-    border-radius: 100%;
-    background: #ffffff;
-    border: 1px solid transparent;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
-    cursor: pointer;
-    font-weight: normal;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .avatar-upload .avatar-edit input+label:hover {
-    background: #f1f1f1;
-    border-color: #d6d6d6;
-  }
-
-  .avatar-upload .avatar-edit input+label:after {
-    /* content: "\f040"; */
-    /* font-family: "FontAwesome"; */
-    color: #757575;
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    margin: auto;
-  }
-
-  .avatar-upload .avatar-preview {
-    width: 192px;
-    height: 192px;
-    position: relative;
-    border-radius: 100%;
-    border: 6px solid #f8f8f8;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-  }
-
-  .avatar-upload .avatar-preview>div {
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-</style>
 <section class="container pt-5">
   <div class="row">
     <?php $get_online = $this->global_model->getOnlineByID($this->session->userdata('online_id'))->row(); ?>
@@ -391,7 +325,7 @@
             // }
             if ($data->online_password != NULL) {
             ?>
-              <button type="button" class="btn btn-info me-3" onclick="modalEditPassword()"><i class="fa fa-key pe-1"></i> เปลี่ยนรหัสผ่าน</button>
+              <button type="button" class="btn btn-info me-3" onclick="modalEditPassword()"><i class="fa fa-key pe-1 me-2"></i> เปลี่ยนรหัสผ่าน</button>
             <?php
             }
             ?>

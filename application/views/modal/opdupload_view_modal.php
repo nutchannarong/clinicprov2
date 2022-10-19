@@ -1,6 +1,6 @@
 <div class="modal-header">
-    <h6 class="modal-title"><i class="fa fa-image"></i>   รูป <?php echo $opdupload_type == 1 ? ' ( ก่อน ) ' : ' ( หลัง ) '; ?></h6>
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h6 class="modal-title"><i class="fa fa-image me-2"></i>   รูป <?php echo $opdupload_type == 1 ? ' ( ก่อน ) ' : ' ( หลัง ) '; ?></h6>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></button>
 </div>
 <div class="modal-body">
     <div class="row">
@@ -23,7 +23,7 @@
             ?>
             <div class="col-md-12 text-center" style="color: #999;">
                 <br/>
-                <i class="fa fa-info-circle"></i> ไม่มีรูปภาพ
+                <i class="fa fa-info-circle me-2"></i> ไม่มีรูปภาพ
             </div>
             <?php
         }
@@ -31,7 +31,7 @@
     </div>
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times-circle"></i> ปิด</button>
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa fa-times-circle me-2"></i> ปิด</button>
 </div>
 <script>
     $(document).ready(function () {

@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="col-12 ml-lg-5">
-                            <h5 class="text-primary"><i class="fas fa-graduation-cap"></i> การศึกษา</h5>
+                            <h5 class="text-primary"><i class="fas fa-graduation-cap me-2"></i> การศึกษา</h5>
                             <?php
                             $get_doctor_study = $this->shopdetail_model->getDoctorStudy($row_doctor->user_id);
                             if ($get_doctor_study->num_rows() > 0) {
@@ -63,7 +63,7 @@
                                 <?php
                             }
                             ?>
-                            <h5 class="text-primary"><i class="fa fa-certificate" aria-hidden="true"></i> วุฒิบัตร</h5>
+                            <h5 class="text-primary"><i class="fa fa-certificate" aria-hidden="true me-2"></i> วุฒิบัตร</h5>
                             <p>
                                 <?php
                                 $get_doctor_diploma = $this->shopdetail_model->getDoctorDiploma($row_doctor->user_id);
@@ -83,7 +83,7 @@
                             }
                             ?>
                             </p>
-                            <h5 class="text-primary"><i class="fa fa-globe" aria-hidden="true"></i> ภาษา</h5>
+                            <h5 class="text-primary"><i class="fa fa-globe" aria-hidden="true me-2"></i> ภาษา</h5>
                             <p>
                                 <?php
                                 $get_doctor_language = $this->shopdetail_model->getDoctorLanguage($row_doctor->user_id);
@@ -103,7 +103,7 @@
                             }
                             ?>
                             </p>
-                            <h5 class="text-primary"><i class="fa fa-clock"></i> เวลาทำงาน</h5>
+                            <h5 class="text-primary"><i class="fa fa-clock me-2"></i> เวลาทำงาน</h5>
                             <div class="table-responsive">
                                 <table class="table table-striped">
                                     <thead class="bg-primary">

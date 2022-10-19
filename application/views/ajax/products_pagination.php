@@ -23,7 +23,7 @@
                             <div class="product-card__info">
                                 <div class="product-card__meta">
                                     <a class="text-muted" href="javascript:void(0)"><?php echo $row->shop_nature_name; ?></a>
-                                    <span style="float: right"><i class="fa fa-eye"></i> <?php echo number_format($row->product_view); ?></span>
+                                    <span style="float: right"><i class="fa fa-eye me-2"></i> <?php echo number_format($row->product_view); ?></span>
                                 </div>
                                 <div class="product-card__name mt-2">
                                     <a class="mt-2 text-primary" target="blank_" href="<?php echo base_url() . 'promotion/' . $row->product_slug; ?>" style="font-size: 16px;"> <?php echo (strlen($row->product_name) > 20 ) ? mb_substr($row->product_name, 0, 20, 'UTF-8') . '...' : $row->product_name; ?></a>
@@ -55,7 +55,7 @@
                                 </div>
                                 <?php if ($row->product_group_id == 2) { ?>
                                     <a target="blank_" href="<?php echo base_url() . 'promotion/' . $row->product_slug; ?>" class="product-card__addtocart-icon" type="button" aria-label="Add to cart">
-                                        <i class="fa fa-birthday-cake "></i>
+                                        <i class="fa fa-birthday-cake  me-2"></i>
                                     </a>
                                 <?php } ?>
                             </div>
@@ -70,7 +70,7 @@
         ?>
         <div class="col">
             <div class="text-center mt-5">
-                <h5><i class="fa fa-exclamation-triangle"></i> ไม่พบข้อมูล</h5>
+                <h5><i class="fa fa-exclamation-triangle me-2"></i> ไม่พบข้อมูล</h5>
             </div>
         </div>
         <?php

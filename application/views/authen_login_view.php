@@ -7,7 +7,7 @@
                 <div class="col-md-5 mt-2 d-flex">
                     <div class="card flex-grow-1 mb-md-0 mr-0 mr-lg-3 ml-0 ml-lg-4">
                         <div class="card-body card-body--padding--2">
-                            <h3 class="card-title text-center"><i class="fas fa-unlock-alt"></i> เข้าสู่ระบบสมาชิก</h3>
+                            <h3 class="card-title text-center"><i class="fas fa-unlock-alt me-2"></i> เข้าสู่ระบบสมาชิก</h3>
                             <form class="account-menu__form" style="padding-bottom: 0px;" id="form-login" method="post" action="<?php //echo base_url() . 'authen/doauthen'; 
                                                                                                                                 ?>" autocomplete="off">
                                 <div class="text-center" id="flash_message">
@@ -36,9 +36,9 @@
                                 <hr>
                                 <div class="account-menu__form-link">
                                     <a href="<?php //echo base_url() . 'forget'; 
-                                              ?>"><i class="fa fa-key"></i> ลืมรหัสผ่าน</a> | 
+                                              ?>"><i class="fa fa-key me-2"></i> ลืมรหัสผ่าน</a> | 
                                     <a href="<?php //echo admin_url(); 
-                                              ?>" target="_blank"><i class="fas fa-sign-in-alt"></i> สำหรับเจ้าของคลินิก</a>
+                                              ?>" target="_blank"><i class="fas fa-sign-in-alt me-2"></i> สำหรับเจ้าของคลินิก</a>
                                 </div>
                             </div>
                         </div>
@@ -92,13 +92,13 @@
           <div class="row row-cols-1 row-cols-sm-2 pt-3 pb-2">
             <div class="col mb-3">
               <a href="<?php echo base_url() . 'forget'; ?>" class="btn btn-icon btn-secondary btn-google btn-lg w-100">
-                <i class="bx bx-key fs-xl me-2"></i>
+                <i class="bx bx-key fs-xl me-2 me-2"></i>
                 ลืมรหัสผ่าน
               </a>
             </div>
             <div class="col mb-3">
               <a href="<?php echo admin_url(); ?>" class="btn btn-icon btn-secondary btn-facebook btn-lg w-100">
-                <i class="bx bx-user-circle fs-xl me-2"></i>
+                <i class="bx bx-user-circle fs-xl me-2 me-2"></i>
                 สำหรับเจ้าของคลินิก
               </a>
             </div>

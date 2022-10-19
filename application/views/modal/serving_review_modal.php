@@ -1,6 +1,6 @@
 <div class="modal-header">
     <h6 class="modal-title">รีวิวหลังการใช้บริการ &nbsp;<span style="color: #de4463;"> (รีวิวการใช้บริการเพื่อรับคะแนน <?php echo $this->config->item('point_review');?> แต้ม)</span></h6>
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></button>
 </div>
 <div class="modal-body">
     <form id="form-review" method="post" action="#" onsubmit="return false" enctype="multipart/form-data" autocomplete="off">
@@ -10,7 +10,7 @@
                 <label>รูปภาพ</label>
                 <img id="preview_image" src="<?php echo admin_url() . 'assets/upload/servingreview/none.png'; ?>" width="100%">
                 <input type="file" id="review_image" name="review_image" accept="image/*" onchange="previewImage(event)" style="display: none">
-                <label for="review_image" class="btn btn-info btn-sm btn-block m-t-10"><i class="fa fa-image"></i> เลือกรูปภาพ</label>
+                <label for="review_image" class="btn btn-info btn-sm btn-block m-t-10"><i class="fa fa-image me-2"></i> เลือกรูปภาพ</label>
             </div>
             <div class="col-md-9">
                 <div class="row">
@@ -54,8 +54,8 @@
     </form>
 </div>
 <div class="modal-footer">
-    <button type="button" id="btn-form-review" class="btn btn-primary"><i id="fa-form-review" class="fas fa-check"></i> ตกลง</button>
-    <button type="reset" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i> ยกเลิก</button>
+    <button type="button" id="btn-form-review" class="btn btn-primary"><i id="fa-form-review" class="fas fa-check me-2"></i> ตกลง</button>
+    <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa fa-times me-2"></i> ยกเลิก</button>
 </div>
 <script>
     $('#form-review').parsley();

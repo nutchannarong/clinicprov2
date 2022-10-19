@@ -1,7 +1,7 @@
 <form id="form_checkout" method="post" action="#" onsubmit="return false" autocomplete="off">
     <div class="modal-header">
         <h6 class="modal-title">ชำระเงิน</h6>
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></button>
     </div>
     <div class="modal-body">
         <div class="row">
@@ -92,7 +92,7 @@
                                 } else {
                                     ?>
                                     <tr>
-                                        <td class="text-center" colspan="13"><i class="fa fa-info-circle text-danger"></i>&nbsp;<span class="text-danger">ไม่พบข้อมูล</span></td>
+                                        <td class="text-center" colspan="13"><i class="fa fa-info-circle text-danger me-2"></i>&nbsp;<span class="text-danger">ไม่พบข้อมูล</span></td>
                                     </tr>
                                     <?php
                                 }
@@ -437,7 +437,7 @@
         if ($('#form_checkout').parsley().validate() === true) {
             Swal.fire({
                 title: 'กำลังทำรายการชำระเงิน',
-                html: '<i class="fa fa-circle-notch fa-spin fa-spin fa-3x"></i><div class="mt-2">กรุณารอสักครู่ ระบบกำลังทำรายการชำระเงิน</div>',
+                html: '<i class="fa fa-circle-notch fa-spin fa-spin fa-3x me-2"></i><div class="mt-2">กรุณารอสักครู่ ระบบกำลังทำรายการชำระเงิน</div>',
                 allowOutsideClick: false,
                 showCancelButton: false,
                 showConfirmButton: false
@@ -548,7 +548,7 @@
 //        if ($('#form_checkout').parsley().validate() === true) {
 //            Swal.fire({
 //                title: 'กำลังทำรายการชำระเงิน',
-//                html: '<i class="fa fa-circle-notch fa-spin fa-spin fa-3x"></i><div class="mt-2">กรุณารอสักครู่ ระบบกำลังทำรายการชำระเงิน</div>',
+//                html: '<i class="fa fa-circle-notch fa-spin fa-spin fa-3x me-2"></i><div class="mt-2">กรุณารอสักครู่ ระบบกำลังทำรายการชำระเงิน</div>',
 //                allowOutsideClick: false,
 //                showCancelButton: false,
 //                showConfirmButton: false
@@ -655,11 +655,11 @@
         Swal.close()
         Swal.fire({
             title: 'ทำรายการชำระเงินเรียบร้อยแล้ว',
-            html: '<i class="fa fa-check fa-3x"></i><div class="mt-2">ทำรายการสั่งซื้อของคุณเรียบร้อยแล้ว</div>',
+            html: '<i class="fa fa-check fa-3x me-2"></i><div class="mt-2">ทำรายการสั่งซื้อของคุณเรียบร้อยแล้ว</div>',
             allowOutsideClick: false,
             showCancelButton: false,
             showConfirmButton: true,
-            confirmButtonText: '<i class="fa fa-shopping-cart"></i> ไปยังหน้ารายการสั่งซื้อ',
+            confirmButtonText: '<i class="fa fa-shopping-cart me-2"></i> ไปยังหน้ารายการสั่งซื้อ',
             preConfirm: () => {
                 window.location.href = service_base_url + 'order?id=' + id
             }
@@ -670,11 +670,11 @@
         Swal.close()
         Swal.fire({
             title: 'ทำรายการชำระเงินไม่สำเร็จ',
-            html: '<i class="fa fa-times fa-3x"></i><div class="mt-2">' + message + '</div>',
+            html: '<i class="fa fa-times fa-3x me-2"></i><div class="mt-2">' + message + '</div>',
             allowOutsideClick: false,
             showCancelButton: false,
             showConfirmButton: true,
-            confirmButtonText: '<i class="fa fa-shopping-cart"></i> กลับไปหน้าชำระเงิน',
+            confirmButtonText: '<i class="fa fa-shopping-cart me-2"></i> กลับไปหน้าชำระเงิน',
             preConfirm: () => {
                 location.reload()
             }

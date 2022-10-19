@@ -15,7 +15,7 @@
                                             <h5><?php echo $title; ?></h5>
                                         </div>
                                         <div class="col-xl-6 text-right">
-                                            <a href="<?php echo base_url('promotions'); ?>" class="btn btn-primary"><i class="fa fa-shopping-basket"></i> เลือกซื้อบริการ</a>
+                                            <a href="<?php echo base_url('promotions'); ?>" class="btn btn-primary"><i class="fa fa-shopping-basket me-2"></i> เลือกซื้อบริการ</a>
                                         </div>
                                     </div>
                                 </div>
@@ -26,7 +26,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-12 text-right">
-                                            <button id="checkout_btn" class="btn btn-primary" onclick="checkoutModal()"><i class="fa fa-shopping-cart"></i> ชำระเงิน</button>
+                                            <button id="checkout_btn" class="btn btn-primary" onclick="checkoutModal()"><i class="fa fa-shopping-cart me-2"></i> ชำระเงิน</button>
                                         </div>
                                     </div>
                                 </div>
@@ -45,15 +45,15 @@
             <form id="form-delete" method="post" action="#" onsubmit="return false" autocomplete="off">
                 <input type="hidden" name="odt_id" id="odt_id" value="">
                 <div class="modal-header">
-                    <h5 class="modal-title text-danger"><i class="fa fa-exclamation-triangle"></i> ยืนยันการลบรายการ</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h5 class="modal-title text-danger"><i class="fa fa-exclamation-triangle me-2"></i> ยืนยันการลบรายการ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></button>
                 </div>
                 <div class="modal-body text-center">
                     ต้องการลบรายการนี้ใช่หรือไม่ ?
                 </div>
                 <div class="modal-footer">
                     <button type="submit" id="btn-delete" class="btn btn-primary">ตกลง</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal"> ปิด</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> ปิด</button>
                 </div>
             </form>
         </div>
@@ -103,7 +103,7 @@
     })
 
     function getCart() {
-        $('#result-pagination').html('<div style="margin-left: 350px; padding:80px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></div>')
+        $('#result-pagination').html('<div style="margin-left: 350px; padding:80px;"><i class="fa fa-spinner fa-spin fa-3x fa-fw me-2"></i></div>')
         $.ajax({
             url: service_base_url + 'cart/getcart',
             type: 'POST',
