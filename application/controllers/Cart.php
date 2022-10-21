@@ -25,6 +25,7 @@ class Cart extends CI_Controller {
             'js'          => array('formatter.js', 'thailand-db/dependencies/JQL.min.js', 'thailand-db/dependencies/typeahead.bundle.js', 'thailand-db/jquery.Thailand.min.js'),
             'js_full'     => array('plugin/cleave/cleave.min.js', 'plugin/sweetalert2/dist/sweetalert2.all.min.js'),
             'js_import'   => array('https://cdn.omise.co/omise.js'),
+            'data' => $this->cart_model->getOnlineByID($this->session->userdata('online_id'))->row()
         );
         $this->renderView('cart_view', $data);
     }

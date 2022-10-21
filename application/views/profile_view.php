@@ -206,7 +206,7 @@
     <!-- Account details -->
     <div class="col-md-8 offset-lg-1 pb-5 mb-2 mb-lg-4 pt-md-5 mt-n3 mt-md-0">
       <div class="ps-md-3 ps-lg-0 mt-md-2 py-md-4">
-        <h2 class="h2 pt-xl-1 pb-2">ข้อมูลส่วนตัว</h2>
+        <h2 class="h2 pt-xl-1 pb-2"><?php echo $title; ?></h2>
         <!-- Basic info -->
         <form id="form-edit-profile" method="post" action="<?php echo base_url() . 'profile/update'; ?>" autocomplete="off" class="needs-validation border-bottom pb-3 pb-lg-4" novalidate>
           <div class="row pb-2">

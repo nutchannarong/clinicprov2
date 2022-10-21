@@ -97,7 +97,7 @@
     <div class="col-md-8 offset-lg-1 pb-5 mb-2 mb-lg-4 pt-md-5 mt-n3 mt-md-0">
       <div class="ps-md-3 ps-lg-0 mt-md-2 py-md-4">
         <section class="container d-md-flex align-items-center justify-content-between pb-3">
-          <h2 class="text-nowrap mb-md-4 pe-md-5"> ปฏิทินนัดหมาย</h2>
+          <h2 class="text-nowrap mb-md-4 pe-md-5"><?php echo $title; ?></h2>
           <!-- Nav tabs -->
           <ul class="nav nav-tabs flex-nowrap justify-content-lg-center overflow-auto pb-2 mb-3 mb-lg-4" role="tablist">
             <li class="nav-item" role="presentation">

@@ -21,7 +21,8 @@ class Opdcard extends CI_Controller
             'keyword'     => ' ประวัติการรักษา OPD ',
             'meta'        => array(),
             'css_full'    => array(),
-            'js_full'     => array()
+            'js_full'     => array(),
+            'data' => $this->opdcard_model->getOnlineByID($this->session->userdata('online_id'))->row()
         );
         $this->renderView('opdcard_view', $data);
     }
