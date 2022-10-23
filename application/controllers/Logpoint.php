@@ -23,6 +23,7 @@ class Logpoint extends CI_Controller
             'meta'        => array(),
             'css'         => array(),
             'js'          => array(),
+            'data' => $this->logpoint_model->getOnlineByID($this->session->userdata('online_id'))->row()
         );
         $this->renderView('logpoint_view', $data);
     }

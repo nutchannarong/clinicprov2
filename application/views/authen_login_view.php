@@ -68,10 +68,10 @@
 
 <section class="position-relative h-100 pt-5 pb-4">
   <!-- Sign in form -->
-  <div class="container d-flex flex-wrap justify-content-center justify-content-xl-start h-100 pt-5">
-    <div class="w-100 align-self-end pt-5 pt-md-5 pb-5" style="max-width: 526px;">
+  <div class="container d-flex flex-wrap justify-content-center justify-content-xl-start h-100 pt-5 pb-4">
+    <div class="w-100 align-self-end pt-5 pt-md-5" style="max-width: 526px;">
       <article class="card border-0 shadow-sm h-100">
-        <div class="card-body p-5">
+        <div class="card-body p-5 pb-0 pb-0">
           <h1 class="text-center">เข้าสู่ระบบ</h1>
           <h2 class="text-center pb-3 mb-3">Envyz.me</h2>
           <form id="form-login" class="needs-validation mb-2" novalidate="" method="post" action="<?php echo base_url() . 'authen/doauthen'; ?>" autocomplete="off">

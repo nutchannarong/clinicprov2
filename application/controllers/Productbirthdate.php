@@ -23,6 +23,7 @@ class Productbirthdate extends CI_Controller
             'keyword' => ' บริการเเนะนำ ',
             'css' => array('ribbon.css'),
             'js' => array(),
+            'data' => $this->productbirthdate_model->getOnlineByID($this->session->userdata('online_id'))->row()
         );
         $this->renderView('productbirthdate_view', $data);
     }

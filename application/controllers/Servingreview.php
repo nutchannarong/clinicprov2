@@ -26,6 +26,7 @@ class Servingreview extends CI_Controller {
             'js'          => array('jquery.star-rating-svg.js'),
             'js_full'     => array(),
             'js_import'   => array(),
+            'data' => $this->servingreview_model->getOnlineByID($this->session->userdata('online_id'))->row()
         );
         $this->renderView('serving_review_view', $data);
     }

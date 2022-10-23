@@ -97,7 +97,7 @@
   <div class="container d-flex flex-wrap justify-content-center justify-content-xl-start h-100 pt-5">
     <div class="w-100 align-self-end pt-5 pt-md-5 pb-5" style="max-width: 526px;">
       <article class="card border-0 shadow-sm h-100">
-        <div class="card-body p-5">
+        <div class="card-body p-5 pb-0">
           <h1 class="text-center">ซิงค์ข้อมูล</h1>
           <h2 class="text-center pb-3 mb-3">Envyz.me</h2>
           <form id="form-sync" class="needs-validation mb-2 pb-4" novalidate="" method="post" action="<?php echo base_url() . 'register/dosync'; ?>" autocomplete="off">

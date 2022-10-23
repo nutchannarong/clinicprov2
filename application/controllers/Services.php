@@ -22,6 +22,7 @@ class Services extends CI_Controller {
             'keyword' => 'การใช้บริการ/คอร์ส',
             'css' => array(),
             'js' => array(),
+            'data' => $this->services_model->getOnlineByID($this->session->userdata('online_id'))->row()
         );
         $this->renderView('services_view', $data);
     }
