@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
-                        <div class="card-body p-5 pb-0">
+                        <div class="card-body p-5 pb-4">
                             <p>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นโยบายความเป็นส่วนตัวนี้ควบคุมลักษณะที่ ClinicPRO รวบรวมข้อมูลจากผู้ใช้ (แต่ละคนคือ "ผู้ใช้") ของเว็บไซต์ www.clinicpro.app ("ไซต์") นโยบายความเป็นส่วนตัวนี้ใช้กับเว็บไซต์และผลิตภัณฑ์และบริการทั้งหมดที่เสนอโดย ClinicPRO
                             </p>

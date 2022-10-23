@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
-                        <div class="card-body p-5 pb-0">
+                        <div class="card-body p-5 pb-4">
                             <h5>การสมัคร / การใช้งาน</h5>
                             <p>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. ผู้ใช้งานที่จะใช้บริการต้องมีอายุ 18 ปี บริบูรณ์ขึ้นไป
