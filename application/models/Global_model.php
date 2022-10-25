@@ -100,7 +100,7 @@ class Global_model extends CI_Model {
         $this->db->where('(shop.shop_active_id = 1 OR shop.shop_proactive_id = 1)');
         $this->db->where('(productreview.productreview_status_id = 1 OR productreview.productreview_status_id IS NULL)');
         $this->db->group_by('shop.shop_id_pri');
-        $this->db->limit(8);
+        $this->db->limit(10);
         $this->db->order_by('shop.shop_proactive_id', 'DESC');
         $this->db->order_by('count_product', 'DESC');
         return $this->db->get();

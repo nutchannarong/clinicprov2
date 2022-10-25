@@ -40,6 +40,7 @@
 
   <!-- Vendor Styles -->
   <link rel="stylesheet" media="screen" href="<?php echo base_url() . 'assets/vendor/boxicons/css/boxicons.min.css'; ?>" />
+  <link rel="stylesheet" media="screen" href="<?php echo base_url() . 'assets/vendor/swiper/swiper-bundle.min.css'; ?>" />
 
   <!-- Main Theme Styles + Bootstrap -->
   <link rel="stylesheet" media="screen" href="<?php echo base_url() . 'assets/css/theme.css'; ?>">

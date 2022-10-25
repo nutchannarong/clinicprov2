@@ -5,7 +5,7 @@
   <!-- Remove "fixed-top" class to make navigation bar scrollable with the page -->
   <header class="header navbar navbar-expand-lg bg-light fixed-top">
     <div class="container px-3">
-      <a href="index.html" class="navbar-brand pe-3">
+      <a href="<?php echo base_url(); ?>" class="navbar-brand pe-3">
         <img src="<?php echo base_url() . 'assets/img/logo.svg'; ?>" width="47" alt="Envyz.me">
         Envyz.me
       </a>
@@ -17,19 +17,19 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a href="components/typography.html" class="nav-link">หน้าแรก</a>
+              <a href="<?php echo base_url() . 'home'; ?>" class="nav-link">หน้าแรก</a>
             </li>
             <li class="nav-item">
-              <a href="docs/getting-started.html" class="nav-link">โปรโมชั่น</a>
+              <a href="<?php echo base_url() . 'promotions'; ?>" class="nav-link">โปรโมชั่น</a>
             </li>
             <li class="nav-item">
-              <a href="docs/getting-started.html" class="nav-link">ค้นหาคลินิก</a>
+              <a href="<?php echo base_url() . 'shops'; ?>" class="nav-link">ค้นหาคลินิก</a>
             </li>
             <li class="nav-item">
-              <a href="docs/getting-started.html" class="nav-link">รีวิว</a>
+              <a href="<?php echo base_url() . 'review'; ?>" class="nav-link">รีวิว</a>
             </li>
             <li class="nav-item">
-              <a href="docs/getting-started.html" class="nav-link">บทความ</a>
+              <a href="<?php echo base_url() . 'blog'; ?>" class="nav-link">บทความ</a>
             </li>
             <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-current="page">ประเภทคลินิค</a>
