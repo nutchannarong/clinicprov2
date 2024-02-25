@@ -19,7 +19,7 @@
           <article class="card border-0 shadow-sm h-100">
             <div class="position-relative">
               <a href="<?php echo base_url() . 'promotions?nature_name=' . $row_shop_nature->shop_nature_name; ?>" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-              <img src="<?php //echo base_url() . 'assets/icon/' . $row_shop_nature->shop_nature_icon; ?>" class="card-img-top" alt="Image">
+              <img src="<?php echo base_url() . 'assets/icon/'. $row_shop_nature->shop_nature_id .'.svg' //echo base_url() . 'assets/icon/' . $row_shop_nature->shop_nature_icon; ?>" class="card-img-top" alt="Image">
             </div>
             <div class="card-body p-2">
               <p class="fs-sm mb-1 text-center" style="font-weight: bold;"><?php echo $row_shop_nature->shop_nature_name; ?></p>
